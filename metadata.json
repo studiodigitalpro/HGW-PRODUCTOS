@@ -1,0 +1,6 @@
+{
+  "name": "HGW Productos Latinoamérica",
+  "description": "Plataforma internacional de Productos HGW para Latinoamérica e Hispanoamérica. Catálogo informativo, precios públicos, precios socio, BV, tutoriales de registro y directorio oficial de oficinas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
