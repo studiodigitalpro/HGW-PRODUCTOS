@@ -28,9 +28,12 @@ import { LegalPage } from './pages/LegalPage';
 const AppContent: React.FC = () => {
   const { currentPath } = useApp();
 
-  // Simple and robust path parsing for multi-page simulation
+  // Robust path parsing and page resolution
   const renderCurrentPage = () => {
-    const path = currentPath.split('?')[0].toLowerCase();
+    let path = currentPath.split('?')[0].split('#')[0].toLowerCase().trim();
+    if (path.length > 1 && path.endsWith('/')) {
+      path = path.slice(0, -1);
+    }
 
     // 1. Home
     if (path === '/' || path === '/inicio' || path === '') {
@@ -41,7 +44,7 @@ const AppContent: React.FC = () => {
     if (path.startsWith('/productos/')) {
       const slug = path.replace('/productos/', '').trim();
       if (slug) {
-        return <ProductDetailPage productSlug={slug} />;
+        return <ProductDetailPage slug={slug} productSlug={slug} />;
       }
       return <ProductsCatalogPage />;
     }
@@ -108,7 +111,7 @@ const AppContent: React.FC = () => {
     }
 
     // 13. FAQ
-    if (path === '/preguntas-frecuentes') {
+    if (path === '/preguntas-frecuentes' || path === '/faq') {
       return <FAQPage />;
     }
 

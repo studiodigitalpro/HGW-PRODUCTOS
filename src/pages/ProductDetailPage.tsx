@@ -29,10 +29,11 @@ import { updatePageSEO, generateProductSchema } from '../utils/seo';
 import { trackEvent } from '../utils/analytics';
 
 interface ProductDetailPageProps {
-  slug: string;
+  slug?: string;
+  productSlug?: string;
 }
 
-export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ slug }) => {
+export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ slug, productSlug }) => {
   const { 
     navigate, 
     selectedCountry, 
@@ -41,7 +42,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ slug }) =>
     openRegistrationModal 
   } = useApp();
 
-  const product = getProductBySlug(slug);
+  const activeSlug = slug || productSlug || '';
+  const product = getProductBySlug(activeSlug);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<'beneficios' | 'ingredientes' | 'uso' | 'paises'>('beneficios');
   const [copiedLink, setCopiedLink] = useState(false);
