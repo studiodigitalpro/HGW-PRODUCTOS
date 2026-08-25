@@ -97,41 +97,50 @@ export const OfficesPage: React.FC = () => {
       </div>
 
       {/* Important Notice Card for In-Store Purchasing */}
-      <div className="bg-gradient-to-r from-amber-50 to-emerald-50 border border-amber-200/80 rounded-3xl p-6 sm:p-8 shadow-xs">
+      <div className="bg-gradient-to-r from-amber-50 via-emerald-50 to-teal-50 border border-amber-200/90 rounded-3xl p-6 sm:p-8 shadow-xs">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-3 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold uppercase tracking-wider">
               <Info className="w-3.5 h-3.5 text-amber-700" />
-              Aviso Importante: Servicios en Oficinas Físicas
+              Requisito Indispensable para Atención en Oficinas
             </div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
-              En las oficinas NO se realizan registros de socios
+              Al escribir o acudir a las Oficinas, tienes que dar tu número de usuario
             </h2>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              Las sedes oficiales HGW están destinadas <strong>exclusivamente para atención al cliente registrado, facturación, compras, gestión de pedidos y despachos</strong>.
+              Las oficinas oficiales HGW atienden compras, facturación y retiros. <strong>Si ya tienes tu número de usuario</strong>, debes presentarlo en ventanilla o contactar a tu patrocinador para cualquier trámite.
             </p>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Para ser atendido, comprar o retirar productos en cualquier oficina oficial es indispensable contar previamente con un <strong className="text-slate-900">Código de Usuario o Socio Registrado</strong>. Puedes crear tu cuenta gratuita en línea antes de acudir, bajo el patrocinio oficial de <strong className="text-emerald-800">{SITE_CONFIG.SPONSOR_NAME} (Código: {SITE_CONFIG.SPONSOR_CODE})</strong>.
+            <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium bg-white/80 p-3 rounded-xl border border-amber-200">
+              💡 <strong>¿Aún no tienes tu número de usuario?</strong> Puedes escribirme directamente por WhatsApp y con mucho gusto te enseño paso a paso cómo crearlo gratis en línea bajo el patrocinio oficial de <strong className="text-emerald-800">{SITE_CONFIG.SPONSOR_NAME} (Código: {SITE_CONFIG.SPONSOR_CODE})</strong>.
             </p>
+            <div className="pt-1 flex flex-wrap gap-4 text-xs text-slate-600">
+              <span className="inline-flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                Los métodos de pagos y envíos varían según país.
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-emerald-600" />
+                Envíos entre 3 a 6 días hábiles según volumen y distancia.
+              </span>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-            <button
-              onClick={() => openRegistrationModal('offices_notice')}
+          <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto shrink-0">
+            <a
+              href={`https://wa.me/${SITE_CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, deseo obtener mi número de usuario de socio HGW para comprar en oficinas y online. ¿Me enseñas cómo crearlo?')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <UserCheck className="w-4 h-4" />
-              <span>Crear Cuenta Online Previa</span>
-            </button>
-            <a
-              href={SITE_CONFIG.REGISTRATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-3 bg-white border border-slate-200 hover:border-emerald-300 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5"
-            >
-              <span>Registro Directo HGW</span>
-              <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+              <span>Escríbeme para Crear tu Usuario</span>
             </a>
+            <button
+              onClick={() => openRegistrationModal('offices_notice')}
+              className="px-4 py-3 bg-white border border-slate-200 hover:border-emerald-300 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+            >
+              <span>Ver Tutorial de Registro</span>
+            </button>
           </div>
         </div>
       </div>

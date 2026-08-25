@@ -8,7 +8,9 @@ import {
   Coins, 
   Lock,
   MessageCircle,
-  ArrowRight
+  ArrowRight,
+  Info,
+  Clock
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { HGW_COUNTRIES } from '../data/countriesData';
@@ -21,8 +23,8 @@ export const PaymentsPage: React.FC = () => {
 
   useEffect(() => {
     updatePageSEO({
-      title: 'Métodos de Pago Oficiales HGW | Transferencias Locales y Tarjetas',
-      description: 'Conoce los medios de pago aceptados para compras y activaciones HGW: Yappy, Nequi, PSE, Yape, Plin, SPEI, SINPE Móvil y tarjetas de crédito.',
+      title: 'Métodos de Pago Oficiales HGW | Por País y Modalidad',
+      description: 'Conoce los medios de pago aceptados para compras y activaciones HGW en Latinoamérica y España. Los métodos de pago y envíos varían según cada país.',
       canonicalUrl: 'https://hgwlatam.com/pagos'
     });
   }, []);
@@ -41,12 +43,26 @@ export const PaymentsPage: React.FC = () => {
             Transacciones Seguras y Verificadas
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
-            Métodos de Pago Oficiales por País
+            Métodos de Pago Oficiales HGW
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Facilitamos tu compra o afiliación mediante las plataformas bancarias, billeteras digitales y pasarelas de pago más seguras y populares de cada país.
+            Opciones de pago seguras disponibles en los 13 países oficiales HGW Latinoamérica e Hispanoamérica.
           </p>
         </div>
+      </div>
+
+      {/* Key Notice */}
+      <div className="bg-amber-50 border border-amber-200/90 rounded-3xl p-6 sm:p-8 space-y-2">
+        <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
+          <Info className="w-5 h-5 text-amber-700 shrink-0" />
+          <span>Información Importante sobre Pagos y Despachos</span>
+        </div>
+        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <strong>Los métodos de pagos y envíos varían según país.</strong> Cada sede u oficina oficial procesa las transacciones mediante las pasarelas bancarias y billeteras móviles locales autorizadas.
+        </p>
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Recuerda que los envíos se entregan entre <strong>3 a 6 días hábiles</strong> dependiendo del volumen de pedidos y la distancia.
+        </p>
       </div>
 
       {/* Payment Categories Grid */}
@@ -57,7 +73,7 @@ export const PaymentsPage: React.FC = () => {
           </div>
           <h3 className="font-bold text-base text-slate-900">Billeteras Móviles & Pagos Rápidos</h3>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Pagos instantáneos sin comisiones bancarias: <strong>Yappy</strong> (Panamá), <strong>Yape y Plin</strong> (Perú), <strong>Nequi y Daviplata</strong> (Colombia), <strong>SINPE Móvil</strong> (Costa Rica).
+            Pagos rápidos locales: <strong>Yappy</strong> (Panamá), <strong>Yape y Plin</strong> (Perú), <strong>Nequi y Daviplata</strong> (Colombia), <strong>SINPE Móvil</strong> (Costa Rica), <strong>QR Simple</strong> (Bolivia), <strong>Bizum</strong> (España).
           </p>
         </div>
 
@@ -67,7 +83,7 @@ export const PaymentsPage: React.FC = () => {
           </div>
           <h3 className="font-bold text-base text-slate-900">Transferencias Bancarias Locales</h3>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Cuentas corporativas y autorizadas para transferencias directas ACH, SPEI (México), PSE (Colombia) y depósitos en ventanilla en bancos autorizados.
+            Cuentas corporativas bancarias para transferencias directas ACH, SPEI (México), PSE (Colombia) y depósitos en bancos autorizados de cada país.
           </p>
         </div>
 
@@ -77,16 +93,23 @@ export const PaymentsPage: React.FC = () => {
           </div>
           <h3 className="font-bold text-base text-slate-900">Tarjetas de Crédito & Débito</h3>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Aceptación de tarjetas Visa, Mastercard, American Express y pagos con links seguros de pasarelas locales o directamente en el portal corporativo HGW.
+            Aceptación de tarjetas Visa, Mastercard y pagos directos en el portal corporativo HGW o en la caja física de las oficinas oficiales.
           </p>
         </div>
       </div>
 
       {/* Country Specific Payment Directory */}
       <div className="bg-white rounded-3xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-6">
-        <h2 className="text-xl font-bold text-slate-900">
-          Medios de Pago por País
-        </h2>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div>
+            <h2 className="text-xl font-bold text-slate-900">
+              Medios de Pago por País (13 Países Oficiales)
+            </h2>
+            <p className="text-xs text-slate-500 mt-0.5">
+              Consulta las opciones bancarias y digitales según tu país de residencia:
+            </p>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {HGW_COUNTRIES.map((c) => (
@@ -99,37 +122,41 @@ export const PaymentsPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 pt-1">
-                {c.paymentMethods.map((pm, idx) => (
-                  <span key={idx} className="px-2 py-1 bg-white rounded-md text-[11px] font-semibold text-slate-700 border border-slate-200">
-                    {pm}
-                  </span>
+              <div className="space-y-1.5 pt-1 border-t border-slate-200/60">
+                {c.paymentMethods.map((m, idx) => (
+                  <div key={idx} className="flex items-center gap-1.5 text-xs text-slate-700">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span className="font-medium text-[11px]">{m}</span>
+                  </div>
                 ))}
+              </div>
+
+              <div className="pt-2 text-[10px] text-slate-500">
+                <span>⏱️ Entregas: 3 a 6 días hábiles</span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Security Callout */}
-      <div className="bg-emerald-50 p-6 rounded-3xl border border-emerald-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <Lock className="w-8 h-8 text-emerald-700 shrink-0" />
-          <div>
-            <h4 className="font-bold text-sm text-emerald-950">Validación y Comprobantes Seguros</h4>
-            <p className="text-xs text-slate-600">
-              Siempre enviamos el comprobante oficial de compra y el código de seguimiento de paquetería inmediatamente tras confirmar tu abono.
-            </p>
-          </div>
+      {/* Help Banner */}
+      <div className="bg-gradient-to-r from-slate-900 to-emerald-950 text-white rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="space-y-2 max-w-2xl">
+          <h3 className="text-xl font-bold text-white">
+            ¿Necesitas ayuda con los datos bancarios de tu país?
+          </h3>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Escríbenos por WhatsApp y te compartimos de inmediato las cuentas bancarias autorizadas o el enlace seguro de pago de HGW.
+          </p>
         </div>
-
         <a
-          href={SITE_CONFIG.WHATSAPP_URL}
+          href={`https://wa.me/${SITE_CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, deseo conocer los datos y números de cuenta autorizados para pagar mis productos HGW.')}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
+          className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all flex items-center gap-2 shrink-0 cursor-pointer"
         >
-          Consultar Cuentas por WhatsApp
+          <MessageCircle className="w-4 h-4" />
+          <span>Solicitar Cuentas por WhatsApp</span>
         </a>
       </div>
 

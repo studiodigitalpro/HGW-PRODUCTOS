@@ -138,7 +138,7 @@ export const HGW_DRIVE_ASSETS = {
   pressOnNailsHgw: '15sCBYw7djn_eJqvUZvRQZVlccsp4Gxv5',
   pressOnNailsPostizas: '1OrnKTe8u3eFqkYJ7ucQ6C3BcNiBHVRm6',
 
-  // --- Corporativo / Certificaciones / Banners ---
+  // --- Certificaciones & Banners Corporativos ---
   tiendaOnlineHgw: '1qiIrjqio2z9qomLGY5y0iO3lPmqTop5b',
   sobreHgw: '1ehIzKeTz9-C4YWT_SJ9Nqqrx-lsP21A4',
   productosHgwBanner: '1_L_oOKHDV41teoKdnxfXtEBAxL4mxe_T',
@@ -153,5 +153,39 @@ export const HGW_DRIVE_ASSETS = {
   certHalalComite: '1TBsykAJxzWlqK3w7UEe_JbLGMFcAm-hX',
   certHalalCertified: '1WkdhJL2x4hsIKErhU9wjPx6Lg0G0O7uf',
   certGlobalGap: '1ODgx9Uq3uoJ0QeaygMJLjsWjBfRuX5gn',
-  certBpaGps: '1tuhdZgWFbIPd5sEA6JVC2djVP38b45Vw'
+  certBpaGps: '1tuhdZgWFbIPd5sEA6JVC2djVP38b45Vw',
+
+  // --- Oficinas Oficiales HGW (Imágenes Reales de Google Drive) ---
+  officeGuatemala: '11et1JByhW2gu7km52aZEXAtYEVbSK84p',
+  officeCochabambaBolivia: '1DYvqehvGjgC5X3ONU8nG2CeVWz8h8Zpb',
+  officeBoliviaDir4Oruro: '1HKz5qu1lDNDfEb7ATwQCpHLJOZGtqUsU',
+  officeColombiaBogotaSur: '1KOyiX3OncG0j2zQ8WDsdNJzAi5kjz_Dy',
+  officeChileSantiago: '1LZ07X04IzhpgclxmkGnmw4lG5UPPQJ0P',
+  officeEcuadorMachala: '1NiJT3LQK9RRC4HL58axc34X8zlg1YZhA',
+  officeColombiaBogotaNorte: '1PWRlm1dmVkxKuSILgz3z1Msi73zGafRL',
+  officeColombiaMedellin: '1Ql2xaTMIm49CycTVVZWaVMKoJWP7djvQ',
+  officePanama: '1S3hKb353tsy2jYx74dQbVLBYYuKnS_Ok',
+  officeBoliviaDir9Trinidad: '1c8nqkYnChQIDm1vsODZ62rU-7PScyZ8H',
+  officeBoliviaDir2SantaCruz: '1kzZ9dZLhlv9KLaZh1qLzxhC5EZ73jaXS',
+  officeBoliviaDir6Sucre: '1lLG1k3BEPTAuvs6bJGTY6RoJfqusq6xT',
+  officeBoliviaDir8Tarija: '1p_oQ8aMFCVFNmiqnCD7Dgz8tD6iJdUWc',
+  officeBoliviaDirLaPaz: '1xJUFCpTH_LvvsBaPrsOU2bdUvv6LEBLZ',
+  officeEcuadorQuito: '1ydNR3wYE-p09kmp8YNCgRmGCciF4ABJ2',
+  officeElSalvadorSanSalvador: '13Bl_u1juIbUsIxl2-40RQpBz6xO7UbU1',
+  officeEcuadorQuevedo: '16TvimDHv_B5MdXLVBTZ-u23m36H5h997',
+  officeRepublicaDominicana: '19BOT0RI1QYhe1ynyJV9o4rhm6S5uBVDb',
+  officeTacnaPeru: '1BEEBoWcSsxHApvoTWhSBkZj9Kedl_-Mg',
+  officeColombiaYopal: '1IbZPaalGwrjp-l7GF986eUfFnM0Dja3z',
+  officeJaenPeru: '1Ux2z-fO5kSj6OaE8qQiFJkQJfz-QYgfV',
+  officeArequipaPeru: '1VEOANVqynGgYCo6d9n6ktlwO2oHQr9wp',
+  officeBoliviaDir3ElAlto: '1Vu5nfgeyO8NCH2PtCqvm_cthcfy7CTNj',
+  officeLimaPeru: '1WyCdycAfJCqUPru1wCUrEtWEmR7-veFT',
+  officeColombiaCali: '1flc6FYSjU57Bp3hLZBZu3zyIwZZKNmU_',
+  officeHuancayoPeru: '1lN8C6d-ib28-DlqNx6RUXUfH4VE5NrhE',
+  officeParaguayAsuncion: '1opHL8MVfLOg6of8SSLjJRar5wJ0dWwGI',
+  officeBoliviaDir7Ivirgarzama: '1pe9hVDqMNRGVkB-IjJK4dqLg-Mu0I63z',
+  officeBoliviaDir5Potosi: '1rBHdM-_BCqV6IkNgPqT9JUgFtT-OxFjk',
+  officeMexicoCdmx: '1rc8tDkTQB4ySwAg0yM0xucqZSBkNFk3w',
+  officeEcuadorGuayaquil: '1teM2dvLqL4bAf38Z0KSa-hg_fz4YJVGu',
+  officeBarcelonaEspana: '1yEhEtBNzU6bkIIxLdhENV_4GF-WjckZl'
 };
