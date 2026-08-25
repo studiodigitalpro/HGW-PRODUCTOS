@@ -140,6 +140,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ slug }) =>
                 src={product.images[selectedImageIndex] || product.images[0]}
                 alt={product.name}
                 className="max-h-full max-w-full object-contain drop-shadow-md transition-all duration-300"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  const currentSrc = product.images[selectedImageIndex] || product.images[0];
+                  if (!target.dataset.triedFallback && currentSrc.includes('lh3.googleusercontent.com/d/')) {
+                    target.dataset.triedFallback = 'true';
+                    const fileId = currentSrc.split('/d/')[1];
+                    target.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+                  }
+                }}
               />
 
               {/* Badges on image */}
@@ -172,7 +182,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ slug }) =>
                         : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-contain" />
+                    <img src={img} alt="" className="w-full h-full object-contain" referrerPolicy="no-referrer" loading="lazy" />
                   </button>
                 ))}
               </div>

@@ -94,10 +94,13 @@ export interface HGWOffice {
   name: string;
   address: string;
   phone?: string;
+  phones?: string[];
   whatsapp?: string;
   email?: string;
   openingHours: string;
   googleMapsUrl?: string;
+  image?: string;
+  type?: string;
   isOfficial: boolean;
   status: 'Operativa' | 'Información Pendiente' | 'Punto Autorizado';
   services: Array<

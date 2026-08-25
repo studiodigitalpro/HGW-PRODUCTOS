@@ -127,27 +127,36 @@ export const CategoriesPage: React.FC<CategoriesPageProps> = ({ categorySlug }) 
               <div
                 key={cat.id}
                 onClick={() => navigate(`/categorias/${cat.slug}`)}
-                className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs hover:shadow-md hover:border-emerald-400 transition-all cursor-pointer group flex flex-col justify-between"
+                className="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-md hover:border-emerald-400 transition-all cursor-pointer group flex flex-col justify-between"
               >
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                    <Package className="w-6 h-6" />
+                <div>
+                  {/* Category Image Header */}
+                  <div className="h-40 bg-gradient-to-b from-slate-50 to-slate-100 p-4 flex items-center justify-center relative overflow-hidden border-b border-slate-100">
+                    <img 
+                      src={cat.image} 
+                      alt={cat.name} 
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+                      referrerPolicy="no-referrer"
+                      loading="lazy"
+                    />
                   </div>
 
-                  <div>
+                  <div className="p-5 space-y-3">
                     <h3 className="font-bold text-base text-slate-900 group-hover:text-emerald-800 transition-colors">
                       {cat.name}
                     </h3>
-                    <p className="text-xs text-slate-500 line-clamp-3 mt-1.5 leading-relaxed">
+                    <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed">
                       {cat.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700">
-                  <span>{cat.productCount} Productos Disponibles</span>
-                  <div className="w-7 h-7 rounded-full bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center transition-colors">
-                    <ArrowRight className="w-3.5 h-3.5" />
+                <div className="p-5 pt-0">
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700">
+                    <span>{cat.productCount} Productos</span>
+                    <div className="w-7 h-7 rounded-full bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center transition-colors">
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
                   </div>
                 </div>
               </div>

@@ -42,6 +42,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           alt={product.name}
           className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
           loading="lazy"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.dataset.triedFallback && product.images[0].includes('lh3.googleusercontent.com/d/')) {
+              target.dataset.triedFallback = 'true';
+              const fileId = product.images[0].split('/d/')[1];
+              target.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w800`;
+            }
+          }}
         />
 
         {/* Top Badges */}

@@ -195,23 +195,41 @@ export const CountriesPage: React.FC<CountriesPageProps> = ({ countrySlug }) => 
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {countryOffices.map((office) => (
-                  <div key={office.id} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-bold text-sm text-slate-900">{office.name}</h3>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 uppercase">
-                        {office.isOfficial ? 'Sede Oficial' : 'Punto Autorizado'}
-                      </span>
+                  <div key={office.id} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs space-y-3 flex flex-col justify-between">
+                    <div>
+                      {office.image && (
+                        <div className="h-36 bg-slate-100 overflow-hidden relative border-b border-slate-100">
+                          <img 
+                            src={office.image} 
+                            alt={office.name}
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                            loading="lazy"
+                            onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                          />
+                        </div>
+                      )}
+                      <div className="p-5 pb-0 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <h3 className="font-bold text-sm text-slate-900">{office.name}</h3>
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 uppercase">
+                            {office.type || (office.isOfficial ? 'Sede Oficial' : 'Punto Autorizado')}
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-600 flex items-start gap-1.5">
+                          <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                          <span>{office.address}</span>
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-xs text-slate-600 flex items-start gap-1.5">
-                      <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>{office.address}, {office.city}</span>
-                    </p>
-                    <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2">
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-slate-400" />
-                        {office.openingHours}
-                      </span>
-                      <span className="font-mono text-emerald-700 font-bold">{office.phone}</span>
+                    <div className="p-5 pt-0">
+                      <div className="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2">
+                        <span className="flex items-center gap-1 text-[11px]">
+                          <Clock className="w-3.5 h-3.5 text-slate-400" />
+                          {office.openingHours}
+                        </span>
+                        <span className="font-mono text-emerald-700 font-bold text-[11px]">{office.phones?.[0] || office.phone}</span>
+                      </div>
                     </div>
                   </div>
                 ))}

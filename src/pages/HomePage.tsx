@@ -25,6 +25,7 @@ import { HGW_COUNTRIES } from '../data/countriesData';
 import { HGW_ARTICLES } from '../data/blogData';
 import { ProductCard } from '../components/ProductCard';
 import { updatePageSEO } from '../utils/seo';
+import { getDriveUrl, HGW_DRIVE_ASSETS } from '../utils/driveImages';
 
 export const HomePage: React.FC = () => {
   const { 
@@ -137,9 +138,11 @@ export const HomePage: React.FC = () => {
 
                 <div className="h-52 bg-emerald-900/40 rounded-2xl p-4 flex items-center justify-center relative overflow-hidden group">
                   <img
-                    src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?w=800&auto=format&fit=crop&q=80"
+                    src={getDriveUrl(HGW_DRIVE_ASSETS.blueberryCandyJpg)}
                     alt="Blueberry Candy Caramelos de Arándano HGW"
                     className="max-h-full max-w-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform"
+                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
 

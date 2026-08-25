@@ -9,13 +9,15 @@ import {
   GraduationCap, 
   Leaf, 
   ArrowRight,
-  HeartHandshake
+  HeartHandshake,
+  CheckCircle2
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { DIRECT_SELLING_ASSOCIATIONS } from '../data/membershipsData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { updatePageSEO } from '../utils/seo';
+import { getDriveUrl, HGW_DRIVE_ASSETS } from '../utils/driveImages';
 
 export const AboutUsPage: React.FC = () => {
   const { navigate, openRegistrationModal } = useApp();
@@ -141,6 +143,53 @@ export const AboutUsPage: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {/* International Certifications Gallery */}
+      <section className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xs space-y-6">
+        <div className="text-center max-w-2xl mx-auto space-y-2">
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-emerald-700 flex items-center justify-center gap-1.5">
+            <ShieldCheck className="w-4 h-4" /> Estándares Internacionales de Calidad
+          </span>
+          <h2 className="text-2xl font-bold text-slate-900">
+            Certificaciones y Avales Científicos Globales
+          </h2>
+          <p className="text-xs text-slate-500">
+            Nuestras 6 bases de producción e investigación cuentan con los más rigurosos sellos de pureza, inocuidad y buenas prácticas de manufactura.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+          {[
+            { name: 'Certificación FDA', desc: 'Registro de Seguridad Alimentaria EE.UU.', id: HGW_DRIVE_ASSETS.certFda },
+            { name: 'Norma ISO 9001', desc: 'Gestión de Calidad Internacional', id: HGW_DRIVE_ASSETS.certIso9001 },
+            { name: 'Certificación GMP', desc: 'Buenas Prácticas de Manufactura Farmacéutica', id: HGW_DRIVE_ASSETS.certGmp },
+            { name: 'Certificación HACCP', desc: 'Inocuidad y Control de Puntos Críticos', id: HGW_DRIVE_ASSETS.certHaccp },
+            { name: 'Certificación Halal', desc: 'Comité de Certificación Halal Internacional', id: HGW_DRIVE_ASSETS.certHalalComite },
+            { name: 'Halal Certified', desc: 'Acreditación Islámica de Pureza', id: HGW_DRIVE_ASSETS.certHalalCertified },
+            { name: 'Global G.A.P.', desc: 'Buenas Prácticas Agrícolas y Cosecha Sostenible', id: HGW_DRIVE_ASSETS.certGlobalGap },
+            { name: 'BPA & GPS', desc: 'Gestión de Productos Seguros y Trazabilidad', id: HGW_DRIVE_ASSETS.certBpaGps },
+          ].map((cert, index) => (
+            <div 
+              key={index}
+              className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex flex-col items-center text-center space-y-3 hover:shadow-md transition-shadow group"
+            >
+              <div className="w-full h-28 bg-white rounded-xl border border-slate-100 p-2 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={getDriveUrl(cert.id)} 
+                  alt={cert.name}
+                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h4 className="font-bold text-xs text-slate-900">{cert.name}</h4>
+                <p className="text-[10px] text-slate-500 mt-0.5 line-clamp-2">{cert.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Backing Associations */}
       <section className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
