@@ -91,7 +91,7 @@ export const OfficesPage: React.FC = () => {
             Oficinas y Centros de Distribución HGW
           </h1>
           <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
-            Localiza las sedes autorizadas para retiro inmediato de productos, activaciones de socios y atención personalizada en América Latina y Europa. Haz clic sobre cualquier oficina para ampliar los detalles.
+            Directorio oficial de sedes habilitadas para <strong>atención al cliente registrado, facturación, compras, pedidos y despachos</strong>. En las oficinas físicas <strong>NO se realizan registros de nuevos socios</strong>; el registro debe gestionarse previamente en línea.
           </p>
         </div>
       </div>
@@ -102,13 +102,16 @@ export const OfficesPage: React.FC = () => {
           <div className="space-y-3 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold uppercase tracking-wider">
               <Info className="w-3.5 h-3.5 text-amber-700" />
-              Requisito Indispensable de Compra en Sede
+              Aviso Importante: Servicios en Oficinas Físicas
             </div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
-              ¿Vas a comprar o retirar en una oficina oficial HGW?
+              En las oficinas NO se realizan registros de socios
             </h2>
+            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Las sedes oficiales HGW están destinadas <strong>exclusivamente para atención al cliente registrado, facturación, compras, gestión de pedidos y despachos</strong>.
+            </p>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Para realizar compras o retirar pedidos en cualquier sede oficial de HGW es requisito contar con un <strong className="text-slate-900">Código de Usuario Activo</strong>. Si aún no estás registrado, puedes crear tu cuenta gratis ahora mismo con el patrocinio oficial de <strong className="text-emerald-800">{SITE_CONFIG.SPONSOR_NAME} (Código: {SITE_CONFIG.SPONSOR_CODE})</strong>.
+              Para ser atendido, comprar o retirar productos en cualquier oficina oficial es indispensable contar previamente con un <strong className="text-slate-900">Código de Usuario o Socio Registrado</strong>. Puedes crear tu cuenta gratuita en línea antes de acudir, bajo el patrocinio oficial de <strong className="text-emerald-800">{SITE_CONFIG.SPONSOR_NAME} (Código: {SITE_CONFIG.SPONSOR_CODE})</strong>.
             </p>
           </div>
 
@@ -118,7 +121,7 @@ export const OfficesPage: React.FC = () => {
               className="px-5 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <UserCheck className="w-4 h-4" />
-              <span>Crear Cuenta de Usuario</span>
+              <span>Crear Cuenta Online Previa</span>
             </button>
             <a
               href={SITE_CONFIG.REGISTRATION_URL}
@@ -288,7 +291,7 @@ export const OfficesPage: React.FC = () => {
                     onClick={() => setSelectedOfficeModal(office)}
                     className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1.5 transition-colors cursor-pointer"
                   >
-                    <span>Ver Información y Servicios</span>
+                    <span>Ver Servicios y Horarios</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
 
@@ -298,9 +301,10 @@ export const OfficesPage: React.FC = () => {
                       openRegistrationModal('office_card');
                     }}
                     className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Crear cuenta online antes de acudir"
                   >
                     <UserCheck className="w-3.5 h-3.5" />
-                    <span>Registrarse</span>
+                    <span>Registro Online</span>
                   </button>
                 </div>
               </div>
@@ -459,13 +463,13 @@ export const OfficesPage: React.FC = () => {
               )}
 
               {/* Requirement reminder */}
-              <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1">
-                <p className="font-bold flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-amber-700" />
-                  Importante para compras en mostrador:
+              <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1.5">
+                <p className="font-bold flex items-center gap-1.5 text-amber-900">
+                  <ShieldCheck className="w-4 h-4 text-amber-700 shrink-0" />
+                  Aviso: En las oficinas NO se registran nuevos socios
                 </p>
                 <p className="text-amber-800 leading-relaxed">
-                  Indica tu código de socio o el código de patrocinio oficial <strong className="font-mono bg-white px-1.5 py-0.5 rounded border border-amber-300">{SITE_CONFIG.SPONSOR_CODE}</strong> ({SITE_CONFIG.SPONSOR_NAME}) al presentarte en caja.
+                  Las sedes físicas atienden exclusivamente a socios y clientes ya registrados para <strong>facturación, compras, pedidos y despachos</strong>. Al presentarte en caja, indica tu código de usuario registrado o el código de patrocinio oficial <strong className="font-mono bg-white px-1.5 py-0.5 rounded border border-amber-300">{SITE_CONFIG.SPONSOR_CODE}</strong> ({SITE_CONFIG.SPONSOR_NAME}).
                 </p>
               </div>
 
@@ -488,7 +492,7 @@ export const OfficesPage: React.FC = () => {
                 className="w-full sm:w-auto px-6 py-2.5 text-xs font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
                 <UserCheck className="w-4 h-4" />
-                <span>Crear Cuenta de Socio para Compras</span>
+                <span>Crear Cuenta Online Previa</span>
               </button>
             </div>
           </div>

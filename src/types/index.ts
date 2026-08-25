@@ -104,14 +104,13 @@ export interface HGWOffice {
   isOfficial: boolean;
   status: 'Operativa' | 'Información Pendiente' | 'Punto Autorizado';
   services: Array<
-    | 'Información General'
-    | 'Registro de Socios'
-    | 'Atención al Cliente'
+    | 'Servicio al Cliente Registrado'
+    | 'Facturación'
+    | 'Compras'
     | 'Recepción de Pedidos'
-    | 'Despacho Inmediato'
+    | 'Despachos y Entregas'
     | 'Envíos Nacionales'
-    | 'Cobros y Pagos'
-    | 'Capacitación'
+    | string
   >;
   notes?: string;
 }

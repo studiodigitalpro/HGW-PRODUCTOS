@@ -19,16 +19,14 @@ export const HGW_OFFICES: HGWOffice[] = [
     isOfficial: true,
     status: 'Operativa',
     services: [
-      'Información General',
-      'Registro de Socios',
-      'Atención al Cliente',
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
       'Recepción de Pedidos',
-      'Despacho Inmediato',
-      'Envíos Nacionales',
-      'Cobros y Pagos',
-      'Capacitación'
+      'Despachos y Entregas',
+      'Envíos Nacionales'
     ],
-    notes: 'Sede oficial y centro de distribución principal en Panamá. Retiro inmediato y activaciones.'
+    notes: 'Sede oficial y centro de distribución principal en Panamá. Atención a clientes registrados, compras, facturación y despacho inmediato.'
   },
 
   // PERÚ
@@ -48,13 +46,12 @@ export const HGW_OFFICES: HGWOffice[] = [
     isOfficial: true,
     status: 'Operativa',
     services: [
-      'Información General',
-      'Registro de Socios',
-      'Atención al Cliente',
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
       'Recepción de Pedidos',
-      'Despacho Inmediato',
-      'Envíos Nacionales',
-      'Capacitación'
+      'Despachos y Entregas',
+      'Envíos Nacionales'
     ]
   },
   {
@@ -72,7 +69,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-pe-huancayo',
@@ -89,7 +92,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-pe-jaen',
@@ -106,7 +115,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-pe-tacna',
@@ -123,7 +138,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // COLOMBIA
@@ -143,13 +164,12 @@ export const HGW_OFFICES: HGWOffice[] = [
     isOfficial: true,
     status: 'Operativa',
     services: [
-      'Información General',
-      'Registro de Socios',
-      'Atención al Cliente',
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
       'Recepción de Pedidos',
-      'Despacho Inmediato',
-      'Envíos Nacionales',
-      'Capacitación'
+      'Despachos y Entregas',
+      'Envíos Nacionales'
     ]
   },
   {
@@ -167,7 +187,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-co-cali',
@@ -184,7 +210,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-co-yopal',
@@ -201,7 +233,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // BOLIVIA
@@ -220,7 +258,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Corporativa',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente', 'Capacitación']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-santacruz',
@@ -237,7 +281,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-cochabamba',
@@ -254,7 +304,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-elalto',
@@ -271,7 +327,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-oruro',
@@ -288,7 +350,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-potosi',
@@ -305,7 +373,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-sucre',
@@ -322,7 +396,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-bo-ivirgarzama',
@@ -339,7 +419,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // ECUADOR
@@ -358,7 +444,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Corporativa',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente', 'Capacitación']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-ec-guayaquil',
@@ -375,7 +467,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-ec-machala',
@@ -392,7 +490,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
   {
     id: 'off-ec-quevedo',
@@ -409,7 +513,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // MÉXICO
@@ -429,13 +539,12 @@ export const HGW_OFFICES: HGWOffice[] = [
     isOfficial: true,
     status: 'Operativa',
     services: [
-      'Información General',
-      'Registro de Socios',
-      'Atención al Cliente',
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
       'Recepción de Pedidos',
-      'Despacho Inmediato',
-      'Envíos Nacionales',
-      'Capacitación'
+      'Despachos y Entregas',
+      'Envíos Nacionales'
     ]
   },
 
@@ -455,7 +564,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // EL SALVADOR
@@ -474,7 +589,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // REPÚBLICA DOMINICANA
@@ -493,7 +614,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // CHILE
@@ -512,7 +639,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Despacho Inmediato', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // PARAGUAY
@@ -531,7 +664,13 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas'
+    ]
   },
 
   // ESPAÑA
@@ -550,7 +689,14 @@ export const HGW_OFFICES: HGWOffice[] = [
     type: 'Sede Oficial Europa',
     isOfficial: true,
     status: 'Operativa',
-    services: ['Información General', 'Registro de Socios', 'Recepción de Pedidos', 'Atención al Cliente', 'Envíos Nacionales']
+    services: [
+      'Servicio al Cliente Registrado',
+      'Facturación',
+      'Compras',
+      'Recepción de Pedidos',
+      'Despachos y Entregas',
+      'Envíos Nacionales'
+    ]
   }
 ];
 

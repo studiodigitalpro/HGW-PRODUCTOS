@@ -39,24 +39,30 @@ export const HGW_FAQS: FAQItem[] = [
   },
   {
     id: 'faq-07',
-    category: 'Envíos y Pagos',
-    question: '¿Cómo se realizan los envíos en mi país?',
-    answer: 'En Panamá los envíos se realizan por Servientrega ($3.00 a $5.00 según peso) o entrega directa. En Perú por Shalom u Olva Courier; en Colombia por Servientrega o Coordinadora; en Ecuador por Servientrega; en México por Estafeta/DHL; y en cada país con la empresa líder de paquetería local. También puedes retirar en oficinas autorizadas.'
+    category: 'Compras',
+    question: '¿Qué trámites y servicios se atienden en las oficinas físicas oficiales de HGW?',
+    answer: 'En las sedes y oficinas oficiales de HGW NO se realizan registros de nuevos socios (el registro debe hacerse previamente en línea). Las oficinas físicas atienden exclusivamente a clientes y socios ya registrados para: Facturación, Compras de productos, Recepción de pedidos, Despachos y entregas directas, y Servicio al cliente registrado.'
   },
   {
     id: 'faq-08',
+    category: 'Envíos y Pagos',
+    question: '¿Cómo se realizan los envíos en mi país?',
+    answer: 'En Panamá los envíos se realizan por Servientrega ($3.00 a $5.00 según peso) o entrega directa. En Perú por Shalom u Olva Courier; en Colombia por Servientrega o Coordinadora; en Ecuador por Servientrega; en México por Estafeta/DHL; y en cada país con la empresa líder de paquetería local. También puedes retirar en oficinas autorizadas una vez registrado.'
+  },
+  {
+    id: 'faq-09',
     category: 'Envíos y Pagos',
     question: '¿Qué métodos de pago son aceptados?',
     answer: 'Aceptamos transferencias bancarias locales (Yappy en Panamá, Yape/Plin en Perú, PSE/Nequi en Colombia, SPEI en México, SINPE en Costa Rica), tarjetas de crédito/débito internacionales, depósitos en ventanilla y pagos en efectivo al retirar en oficinas autorizadas.'
   },
   {
-    id: 'faq-09',
+    id: 'faq-10',
     category: 'Productos',
     question: '¿Los productos HGW cuentan con certificaciones internacionales de calidad?',
     answer: 'Sí. Las instalaciones y procesos de manufactura de Green World Group cuentan con certificaciones internacionales de Buenas Prácticas de Manufactura (GMP), ISO 9001, Certificación Halal, HACCP y registros sanitarios otorgados por las autoridades de salud de cada país donde opera formalmente.'
   },
   {
-    id: 'faq-10',
+    id: 'faq-11',
     category: 'General',
     question: '¿Este sitio es la página oficial corporativa de HGW?',
     answer: 'No. Este portal web es desarrollado y administrado por un Distribuidor y Afiliado Independiente Autorizado de HGW (Yamilka Batista, Código Yamilka507). Es una plataforma informativa, educativa y de atención al cliente para toda la comunidad hispanohablante de América.'
