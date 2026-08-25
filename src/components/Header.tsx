@@ -41,11 +41,9 @@ export const Header: React.FC = () => {
     { label: 'Membresías', path: '/membresias' },
     { label: 'Cómo Funciona', path: '/como-funciona' },
     { label: 'Tutorial Registro', path: '/tutorial-registro' },
-    { label: 'Países', path: '/paises' },
     { label: 'Oficinas', path: '/oficinas' },
     { label: 'Envíos', path: '/envios' },
     { label: 'Pagos', path: '/pagos' },
-    { label: 'Blog', path: '/blog' },
     { label: 'Contacto', path: '/contacto' }
   ];
 
@@ -236,12 +234,12 @@ export const Header: React.FC = () => {
             </div>
             <button
               onClick={() => {
-                handleNavClick('/paises');
+                setIsCountryDropdownOpen(true);
                 setIsMobileMenuOpen(false);
               }}
-              className="mt-2 w-full py-1.5 text-[11px] font-bold text-emerald-800 bg-white rounded border border-emerald-200 text-center"
+              className="mt-2 w-full py-1.5 text-[11px] font-bold text-emerald-800 bg-white rounded border border-emerald-200 text-center cursor-pointer"
             >
-              Cambiar País / Ver Disponibilidad
+              Cambiar País / Moneda
             </button>
           </div>
 

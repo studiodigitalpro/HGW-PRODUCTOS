@@ -111,6 +111,21 @@ export const ProductsCatalogPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Price Observation Banner */}
+      <div className="bg-amber-50/90 border border-amber-200/90 rounded-2xl p-3.5 sm:p-4 text-xs text-amber-900 flex items-center gap-3">
+        <div className="w-8 h-8 rounded-xl bg-amber-200/70 flex items-center justify-center shrink-0 text-amber-800 font-bold">
+          $
+        </div>
+        <div className="space-y-0.5">
+          <p className="font-bold text-amber-950">
+            Observación sobre los Precios:
+          </p>
+          <p className="text-amber-800 text-[11px] leading-relaxed">
+            Todos los precios mostrados en el catálogo están expresados en <strong>Dólares Americanos (USD)</strong> como tarifa base de referencia y pueden variar según cada país de acuerdo a regulaciones aduaneras e impuestos locales. Al registrarte como socio obtienes hasta un <strong>60% de descuento</strong>.
+          </p>
+        </div>
+      </div>
+
       {/* Controls & Filter Bar */}
       <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-xs space-y-4">
         

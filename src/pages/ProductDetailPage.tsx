@@ -288,6 +288,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ slug }) =>
                     {product.bv.toFixed(2)} BV
                   </span>
                 </div>
+
+                {/* Price USD Note */}
+                <div className="pt-2 border-t border-emerald-100/60 flex items-start gap-1.5 text-[11px] text-amber-900 bg-amber-50/70 p-2 rounded-xl">
+                  <Info className="w-3.5 h-3.5 text-amber-700 shrink-0 mt-0.5" />
+                  <p>
+                    <strong>Nota:</strong> Precios en Dólares Americanos (USD) de referencia. Pueden variar según el país de compra y tasa cambiaria local.
+                  </p>
+                </div>
               </div>
 
               {/* DUAL ACTION CTAS (CORE REQUIREMENT) */}

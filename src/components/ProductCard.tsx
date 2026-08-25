@@ -34,7 +34,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     >
       {/* Product Image Container */}
       <div 
-        onClick={() => navigate(`/productos/${product.slug}`)}
+        onClick={() => openProductModal(product, 'detalles')}
         className="relative h-52 sm:h-56 bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden cursor-pointer flex items-center justify-center p-4"
       >
         <img
@@ -98,7 +98,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
           {/* Product Title */}
           <h3 
-            onClick={() => navigate(`/productos/${product.slug}`)}
+            onClick={() => openProductModal(product, 'detalles')}
             className="text-sm sm:text-base font-bold text-slate-900 hover:text-emerald-700 transition-colors line-clamp-2 cursor-pointer leading-snug mb-2"
           >
             {product.name}
@@ -144,10 +144,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <div className="grid grid-cols-2 gap-2">
             <button
               id={`details-btn-${product.id}`}
-              onClick={() => navigate(`/productos/${product.slug}`)}
+              onClick={() => openProductModal(product, 'detalles')}
               className="w-full py-2 px-2 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl transition-colors text-center cursor-pointer flex items-center justify-center gap-1"
             >
-              <span>Detalles</span>
+              <span>Ver Pop-up</span>
               <ArrowRight className="w-3 h-3 text-slate-400" />
             </button>
 

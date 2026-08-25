@@ -7,22 +7,11 @@ export const CATEGORIES_INFO: HGWCategoryInfo[] = [
     slug: 'alimentos',
     name: 'Alimentos',
     title: 'Alimentos y Bebidas Funcionales',
-    description: 'Bebidas herbales, cafés terapéuticos enriquecidos con Ganoderma, Cordyceps, Arándano y caramelos funcionales bioactivos.',
+    description: 'Bebidas herbales, cafés terapéuticos enriquecidos con Ganoderma, Cordyceps, Arándano y caramelos bioactivos.',
     iconName: 'Coffee',
     image: getDriveUrl(HGW_DRIVE_ASSETS.blueberryCoffeeJpg),
     color: 'from-amber-600 to-amber-800',
-    productCount: 22
-  },
-  {
-    id: 'suplementos',
-    slug: 'suplementos',
-    name: 'Suplementos',
-    title: 'Nutracéuticos y Suplementos',
-    description: 'Fórmulas concentradas de alta asimilación con Spirulina Platensis, micronutrientes esenciales y extractos botánicos.',
-    iconName: 'Sparkles',
-    image: getDriveUrl(HGW_DRIVE_ASSETS.spirulinaCapsulas),
-    color: 'from-emerald-600 to-teal-800',
-    productCount: 1
+    productCount: 23
   },
   {
     id: 'cuidado-personal',
@@ -51,11 +40,22 @@ export const CATEGORIES_INFO: HGWCategoryInfo[] = [
     slug: 'equipo',
     name: 'Equipo',
     title: 'Equipos y Artículos para el Hogar',
-    description: 'Termo alcalinizador de agua Waterson, almohadas magnéticas ergonómicas, tazas térmicas y hervidores de acero inoxidable.',
+    description: 'Termo alcalinizador Waterson, almohadas magnéticas ergonómicas, tazas térmicas y hervidores de acero inoxidable.',
     iconName: 'Zap',
     image: getDriveUrl(HGW_DRIVE_ASSETS.thermoTurmalinaJpg),
     color: 'from-sky-600 to-slate-800',
     productCount: 6
+  },
+  {
+    id: 'suplementos',
+    slug: 'suplementos',
+    name: 'Suplementos',
+    title: 'Nutracéuticos y Suplementos',
+    description: 'Fórmulas concentradas de alta asimilación con Spirulina Platensis, micronutrientes esenciales y extractos botánicos.',
+    iconName: 'Sparkles',
+    image: getDriveUrl(HGW_DRIVE_ASSETS.spirulinaCapsulas),
+    color: 'from-emerald-600 to-teal-800',
+    productCount: 1
   },
   {
     id: 'licores',
@@ -78,17 +78,6 @@ export const CATEGORIES_INFO: HGWCategoryInfo[] = [
     image: getDriveUrl(HGW_DRIVE_ASSETS.pressOnNailsPng),
     color: 'from-pink-500 to-rose-700',
     productCount: 1
-  },
-  {
-    id: 'cuidado-facial',
-    slug: 'cuidado-facial',
-    name: 'Cuidado facial',
-    title: 'Cuidado Facial y Piel',
-    description: 'Línea dermocosmética antienvejecimiento con antioxidantes de arándano y minerales energéticos.',
-    iconName: 'SunMedium',
-    image: getDriveUrl(HGW_DRIVE_ASSETS.colagenoP500),
-    color: 'from-emerald-500 to-teal-700',
-    productCount: 2
   }
 ];
 
@@ -96,15 +85,15 @@ export const HGW_PRODUCTS: HGWProduct[] = [
   {
     id: 1,
     name: "Blueberry Candy (Caramelos de Arándano)",
-    slug: "blueberry-candy-caramelos-de-arandano",
+    slug: "blueberry-candy",
     category: "Alimentos",
-    rawMaterial: "Arándanos Azules de Canadá (Vaccinium myrtillus)",
-    presentation: "Frasco con 60 caramelos bioactivos",
+    rawMaterial: "Arandanos",
+    presentation: "60 caramelos por frasco",
     publicPrice: 5.80,
     partnerPrice: 4.00,
     bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     bestSeller: true,
@@ -114,408 +103,393 @@ export const HGW_PRODUCTS: HGWProduct[] = [
       getDriveUrl(HGW_DRIVE_ASSETS.blueberryCandyWebp)
     ],
     shortDescription: "Deliciosos caramelos antioxidantes ricos en antocianinas puras para proteger la visión, retardar el envejecimiento celular y mejorar la microcirculación.",
-    fullDescription: "Formulados con extracto liofilizado de arándano silvestre canadiense, estos caramelos son el snack funcional predilecto para adultos y niños. Su alto contenido en antocianinas y polifenoles protege las células oculares contra la luz azul de pantallas y fortalece el sistema inmunológico frente al estrés oxidativo diario.",
+    fullDescription: "Formulados con extracto liofilizado de arándano silvestre canadiense, estos caramelos son el snack funcional predilecto. Su alto contenido en antocianinas y polifenoles protege las células oculares contra la luz azul de pantallas y fortalece el sistema inmunológico.",
     benefits: [
       "Protege la retina ocular y disminuye la fatiga visual frente a pantallas",
-      "Poderoso efecto antioxidante contra radicales libres y envejecimiento prematuro",
-      "Mejora la elasticidad de los capilares sanguíneos y la microcirculación",
+      "Poderoso efecto antioxidante contra radicales libres",
+      "Mejora la elasticidad de los capilares sanguíneos",
       "Apto para toda la familia y práctico para llevar en el bolsillo"
     ],
     ingredients: [
-      "Extracto concentrado de Arándano Azul canadiense (Vaccinium myrtillus)",
+      "Extracto concentrado de Arándano Azul (Vaccinium myrtillus)",
       "Isomaltitol natural",
-      "Vitamina C (Ácido ascórbico)",
+      "Vitamina C",
       "Polifenoles botánicos activos"
     ],
     usageInstructions: [
       "Consumir de 1 a 2 caramelos al día, preferiblemente entre comidas.",
-      "Dejar disolver lentamente en la boca para maximizar la absorción sublingual de flavonoides."
+      "Dejar disolver lentamente en la boca."
     ],
     tags: ["arándano", "visión", "antioxidante", "caramelos", "salud ocular"]
   },
   {
     id: 2,
-    name: "Blueberry Fruit Tea (Té de Frutas con Arándano)",
-    slug: "blueberry-fruit-tea-te-de-frutas-con-arandano",
+    name: "Blueberry Fruit Tea (Jam) (Mermelada de Arándanos)",
+    slug: "blueberry-fruit-tea-jam",
     category: "Alimentos",
-    rawMaterial: "Arándano Liofilizado & Hierbas Antioxidantes",
-    presentation: "Caja con 20 sobres de infusión frutal",
-    publicPrice: 19.50,
-    partnerPrice: 13.50,
-    bv: 6.75,
+    rawMaterial: "Arandanos",
+    presentation: "200 gramos",
+    publicPrice: 12.00,
+    partnerPrice: 8.00,
+    bv: 4.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.mermeladaArandano)
     ],
-    shortDescription: "Infusión aromática rejuvenecedora que combina el poder antioxidante del arándano silvestre con notas frutales reconfortantes.",
-    fullDescription: "Una experiencia sensorial refrescante y terapéutica. Elaborado con trozos deshidratados de arándano, hibisco y escaramujo, este té brinda una recarga inmediata de vitamina C y bioflavonoides que combaten la inflamación celular y promueven una digestión ligera.",
+    shortDescription: "Concentrado y mermelada frutal de arándanos bioactivos para infusiones calientes, frías o untar saludablemente.",
+    fullDescription: "Elaborado con arándanos silvestres enteros seleccionados. Rico en antioxidantes solubles, polifenoles y vitamina C para una nutrición celular completa.",
     benefits: [
-      "Favorece la hidratación celular con sabor naturalmente afrutado",
-      "Aporte generoso de vitamina C y antioxidantes solubles",
-      "Ayuda a regular la acidez digestiva y promueve la saciedad",
-      "Sin cafeína agregada, ideal para tomar a cualquier hora del día o noche"
+      "Excelente fuente de bioflavonoides y vitamina C",
+      "Favorece la digestión y la saciedad natural",
+      "Delicioso sabor natural sin colorantes artificiales",
+      "Versátil para preparar como infusión aromática o degustar directamente"
     ],
     ingredients: [
-      "Arándano silvestre deshidratado",
-      "Flores de Hibisco (Jamaica)",
-      "Fruto de Escaramujo",
-      "Manzana silvestre deshidratada"
+      "Arándano silvestre concentrado (200g)",
+      "Fructosa natural",
+      "Pectina cítrica",
+      "Ácido cítrico natural"
     ],
     usageInstructions: [
-      "Colocar 1 sobre en una taza con agua caliente (85°C - 90°C).",
-      "Dejar reposar de 3 a 5 minutos antes de consumir.",
-      "Se puede disfrutar caliente o frío agregando hielo."
+      "Disolver 1 a 2 cucharadas en una taza con agua caliente o fría, o untar al gusto."
     ],
-    tags: ["té", "infusión", "arándano", "antioxidante", "digestión"]
+    tags: ["mermelada", "té frutal", "arándano", "antioxidante"]
   },
   {
     id: 3,
-    name: "Blueberry Collagen Peptide (Péptido de Colágeno con Arándano)",
-    slug: "blueberry-collagen-peptide-peptido-de-colageno-con-arandano",
+    name: "Blueberry Collagen Peptide (Péptido de Colágeno de Arándano)",
+    slug: "blueberry-collagen-peptide",
     category: "Alimentos",
-    rawMaterial: "Péptidos Bioactivos de Colágeno Hidrolizado & Arándano",
-    presentation: "Caja con 20 sobres individuales solubles",
-    publicPrice: 32.00,
-    partnerPrice: 22.00,
-    bv: 11.00,
+    rawMaterial: "Arandanos",
+    presentation: "12 sobres de 25 gramos c/u",
+    publicPrice: 29.00,
+    partnerPrice: 20.00,
+    bv: 12.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
+    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.colagenoP500)
     ],
-    shortDescription: "Micro-péptidos de colágeno de máxima absorción celular potenciados con antocianinas de arándano para devolver firmeza a la piel y articulaciones.",
-    fullDescription: "Gracias a su tecnología de hidrólisis enzimática avanzada, los péptidos de colágeno HGW poseen un peso molecular inferior a 1000 Daltons, garantizando una biodisponibilidad superior al 95%. La adición de arándano estimula la síntesis endógena de colágeno y previene la degradación por radicales libres.",
+    shortDescription: "Micro-péptidos bioactivos de colágeno de máxima absorción potenciados con arándano para piel, articulaciones y cabello.",
+    fullDescription: "Péptidos bioactivos de bajo peso molecular (<1000 Daltons) que estimulan la síntesis de colágeno tipo I y III, otorgando firmeza dérmica y flexibilidad articular.",
     benefits: [
-      "Restaura la elasticidad, firmeza e hidratación dérmica profunda",
-      "Fortalece folículos capilares, uñas quebradizas y cartílagos articulares",
-      "Atenúa líneas de expresión y previene la flacidez cutánea",
-      "Rápida disolución instantánea con delicioso sabor a frutos rojos"
+      "Restaura la elasticidad y firmeza de la piel",
+      "Fortalece articulaciones, ligamentos, cabello y uñas",
+      "Atenúa líneas de expresión y flacidez",
+      "Excelente asimilación con sabor a frutos rojos"
     ],
     ingredients: [
-      "Péptidos bioactivos de colágeno hidrolizado tipo I y III",
-      "Polvo de arándano concentrado",
-      "Vitamina C (cofactor de síntesis de colágeno)",
-      "Ácido Hialurónico vegetal"
+      "Péptidos de colágeno hidrolizado bioactivo",
+      "Extracto de arándano en polvo",
+      "Vitamina C",
+      "Ácido hialurónico vegetal"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en un vaso con 150-200 ml de agua a temperatura ambiente.",
-      "Tomar en ayunas o antes de dormir para una asimilación óptima."
+      "Disolver 1 sobre en 150-200 ml de agua en ayunas o antes de dormir."
     ],
     tags: ["colágeno", "piel", "articulaciones", "antienvejecimiento", "arándano"]
   },
   {
     id: 4,
-    name: "Fresh Drink Chang JingJing (Bebida Limpiadora Intestinal)",
-    slug: "fresh-drink-chang-jing-jing-limpiador-intestinal",
+    name: "Fresh Drink Chang JingJing (Bebida Fresca Chang JingJing)",
+    slug: "fresh-drink-chang-jingjing",
     category: "Alimentos",
-    rawMaterial: "Fibras solubles, Arándano & Extractos Botánicos Depurativos",
-    presentation: "Caja con 15 sobres de 10g",
-    publicPrice: 28.00,
-    partnerPrice: 19.50,
-    bv: 9.75,
+    rawMaterial: "Mix herbales",
+    presentation: "6 sobres de 3.5 gramos c/u",
+    publicPrice: 13.00,
+    partnerPrice: 9.00,
+    bv: 5.40,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
-    bestSeller: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.freshDrinkColon),
       getDriveUrl(HGW_DRIVE_ASSETS.freshDrinkChangJingJing),
+      getDriveUrl(HGW_DRIVE_ASSETS.freshDrinkColon),
       getDriveUrl(HGW_DRIVE_ASSETS.freshDrinkP500)
     ],
-    shortDescription: "Bebida detox inteligente diseñada para desintoxicar el colon, eliminar toxinas acumuladas y restaurar el tránsito intestinal suave.",
-    fullDescription: "Fresh Drink Chang JingJing es la fórmula insignia de HGW para la limpieza intestinal profunda sin provocar cólicos ni irritación. Sus fibras prebióticas atrapan desechos metabólicos e incrustaciones fecales antiguas, favoreciendo un microbioma intestinal equilibrado y un vientre más desinflamado.",
+    shortDescription: "Bebida botánica refrescante y depurativa diseñada para aliviar la pesadez estomacal y promover la limpieza intestinal.",
+    fullDescription: "Fórmula a base de un mix botánico selecto que ayuda a desinflamar el tracto digestivo, promoviendo ligereza y equilibrio de la microbiota.",
     benefits: [
-      "Estimula una evacuación intestinal regular y sin molestias",
-      "Ayuda a desintoxicar el hígado y tracto digestivo de residuos acumulados",
-      "Reduce la sensación de pesadez y distensión abdominal",
-      "Promueve un cutis limpio al descongestionar el canal de excreción primario"
+      "Descongestiona el sistema digestivo de forma suave",
+      "Alivia la pesadez abdominal después de comidas copiosas",
+      "Aporta antioxidantes botánicos purificadores",
+      "Fácil de preparar en cualquier momento del día"
     ],
     ingredients: [
-      "Fibras dietéticas solubles e insolubles",
-      "Extracto de Arándano rojo y azul",
-      "Polvo de semillas de lino liofilizadas",
-      "Fructooligosacáridos (prebióticos FOS)"
+      "Mix herbal bioactivo",
+      "Fibras solubles naturales",
+      "Extractos botánicos purificantes"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en un vaso de agua tibia o a temperatura ambiente.",
-      "Beber inmediatamente y acompañar con otro vaso de agua pura.",
-      "Consumir preferentemente por la noche antes de acostarse."
+      "Disolver 1 sobre en un vaso de agua tibia o fría después de una comida principal."
     ],
-    tags: ["detox", "colon", "digestión", "fibra", "limpieza intestinal"]
+    tags: ["digestión", "detox", "herbal", "limpieza"]
   },
   {
     id: 5,
-    name: "Pro Shaping Tea (Té Moldeador Pro)",
-    slug: "pro-shaping-tea-te-moldeador-profesional",
+    name: "Pro Shaping Tea (Té Moldeador Profesional)",
+    slug: "pro-shaping-tea",
     category: "Alimentos",
-    rawMaterial: "Té Verde, Hoja de Loto, Cassia & Arándano",
-    presentation: "Caja con 20 sobres filtrantes",
-    publicPrice: 24.00,
-    partnerPrice: 16.80,
-    bv: 8.40,
+    rawMaterial: "Mix herbales",
+    presentation: "24 sobres de 3 gramos c/u",
+    publicPrice: 23.00,
+    partnerPrice: 16.00,
+    bv: 9.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    bestSeller: true,
+    featured: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.proshapingP500),
-      getDriveUrl(HGW_DRIVE_ASSETS.teQuemadorGrasa)
+      getDriveUrl(HGW_DRIVE_ASSETS.teQuemadorGrasa),
+      getDriveUrl(HGW_DRIVE_ASSETS.proshapingP500)
     ],
-    shortDescription: "Té termogénico y lipolítico tradicional oriental formulado para acelerar el metabolismo, quemar grasas y modelar la silueta corporal.",
-    fullDescription: "Combinación magistral de la medicina herbolaria ancestral con extractos estandarizados. Sus componentes activos incrementan el gasto calórico en reposo, reducen la absorción de grasas en las comidas y facilitan la eliminación de líquidos retenidos sin provocar efecto rebote.",
+    shortDescription: "Té herbal termogénico y desintoxicante formulado para acelerar el metabolismo y quemar grasa acumulada.",
+    fullDescription: "Combinación de hierbas medicinales de la medicina tradicional oriental que promueve la lipólisis natural, el drenaje de líquidos retenidos y el control de apetito.",
     benefits: [
-      "Activa el metabolismo termogénico y quema calórica",
-      "Facilita la reducción de grasa localizada en abdomen y cintura",
-      "Acción drenante natural que combate la retención de líquidos",
-      "Controla los antojos por azúcares y alimentos hipercalóricos"
+      "Acelera el metabolismo basal de forma natural",
+      "Favorece la eliminación de líquidos retenidos",
+      "Ayuda en el control del apetito y antojos dulces",
+      "Brinda energía sostenida sin alterar los nervios"
     ],
     ingredients: [
-      "Hojas selectas de Té Verde",
-      "Extracto de Hoja de Loto (Nelumbo nucifera)",
-      "Semillas de Cassia tora purificadas",
-      "Polvo de Arándano silvestre"
+      "Té verde orgánico",
+      "Hojas de loto",
+      "Semillas de Cassia",
+      "Hierbas termogénicas orientales"
     ],
     usageInstructions: [
-      "Infundir 1 sobre en agua hirviendo durante 5-7 minutos.",
-      "Tomar 1 taza 30 minutos después del almuerzo o cena principal."
+      "Infundir 1 sobre en agua caliente durante 5 minutos. Tomar 1 a 2 veces al día."
     ],
-    tags: ["té", "control de peso", "termogénico", "quemagrasa", "adelgazar"]
+    tags: ["control de peso", "té moldeador", "metabolismo", "quema grasa"]
   },
   {
     id: 6,
-    name: "Berry Juice HIGH VC (Jugo de Arándano Alto en Vitamina C)",
-    slug: "berry-juice-high-vc-jugo-de-arandano",
+    name: "Berry Juice HIGH VC (Jugo de Arándanos en Polvo Rico en Vitamina C)",
+    slug: "berry-juice-high-vc",
     category: "Alimentos",
-    rawMaterial: "Concentrado Puro de Arándano & Acerola",
-    presentation: "Caja con 15 sobres de polvo para bebida",
-    publicPrice: 22.50,
-    partnerPrice: 15.75,
-    bv: 7.80,
+    rawMaterial: "Arandanos",
+    presentation: "30 sobres de 6 gramos c/u",
+    publicPrice: 25.00,
+    partnerPrice: 17.00,
+    bv: 8.50,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
+    featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.berryJuiceHighVc)
     ],
-    shortDescription: "Bebida bio-inmune concentrada con megadosis de Vitamina C natural y flavonoides para blindar el sistema respiratorio y celular.",
-    fullDescription: "Cada sobre equivale a comer más de medio kilo de bayas silvestres frescas. Proporciona una defensa antioxidante formidable contra gripes, infecciones respiratorias y estrés oxidativo ambiental, con un sabor cítrico refrescante.",
+    shortDescription: "Potente concentrado de arándano silvestre con mega dosis de vitamina C bioasimilable para blindar el sistema inmune.",
+    fullDescription: "Bebida antioxidante de alta biodisponibilidad que fortalece las defensas del organismo, combate el daño oxidativo y mejora la vitalidad diaria.",
     benefits: [
-      "Potente escudo inmunológico frente a resfriados y virus estacionales",
-      "Estimula la síntesis de colágeno natural y elastina",
-      "Aporta energía vital y combate el cansancio crónico",
-      "100% natural, sin colorantes ni saborizantes artificiales"
+      "Mega dosis de vitamina C y bioflavonoides activos",
+      "Fortalece el sistema inmunológico contra infecciones",
+      "Estimula la producción natural de colágeno dérmico",
+      "Refrescante sabor a arándanos sin azúcar añadida"
     ],
     ingredients: [
-      "Concentrado de Arándano Azul y Rojo",
-      "Extracto de Acerola salvaje (fuente natural de Vitamina C)",
-      "Bioflavonoides cítricos"
+      "Extracto liofilizado de Arándano silvestre",
+      "Ácido L-ascórbico bioactivo (Vitamina C)",
+      "Bioflavonoides cítricos",
+      "Estevia natural"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en 200 ml de agua fresca.",
-      "Tomar en el desayuno o como merienda hidratante."
+      "Disolver 1 sobre en 200 ml de agua fresca por la mañana o con el almuerzo."
     ],
-    tags: ["vitamina c", "arándano", "inmunidad", "antioxidante", "jugo"]
+    tags: ["vitamina C", "arándano", "inmunidad", "antioxidante"]
   },
   {
     id: 7,
-    name: "Blueberry Wine (Vino Artesanal de Arándanos)",
-    slug: "blueberry-wine-vino-de-arandanos",
+    name: "Blueberry Wine (Vino de Arándanos)",
+    slug: "blueberry-wine",
     category: "Licores",
-    rawMaterial: "Arándanos Azules seleccionados de cosecha tardía",
-    presentation: "Botella de vidrio de lujo de 750 ml",
-    publicPrice: 38.00,
-    partnerPrice: 26.50,
-    bv: 10.00,
+    rawMaterial: "Arandanos",
+    presentation: "Botella de 750 ML",
+    publicPrice: 36.00,
+    partnerPrice: 26.00,
+    bv: 5.20,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.vinoArandanosJpg)
     ],
-    shortDescription: "Exquisito vino botánico elaborado por fermentación lenta de arándanos puros. Un brindis lleno de polifenoles y elegancia.",
-    fullDescription: "Producido mediante procesos de vinificación tradicionales a bajas temperaturas que preservan intactas las antocianinas y el resveratrol natural de los arándanos canadienses. Un bouquet afrutado, balanceado y aterciopelado en el paladar.",
+    shortDescription: "Vino artesanal gourmet elaborado 100% con arándanos silvestres canadienses de alta graduación antioxidante.",
+    fullDescription: "Bebida alcohólica fina y aromática fruto de la fermentación natural de bayas de arándano silvestre. Conserva polifenoles protectores de la salud cardiovascular.",
     benefits: [
-      "Alto contenido de resveratrol y polifenoles cardioprotectores",
-      "Favorece la salud vascular y la circulación coronaria con moderación",
-      "Maridaje ideal para carnes magras, quesos maduros y ocasiones especiales",
-      "Elaborado 100% a partir de jugo de arándano fermentado"
+      "Alto contenido de resveratrol y antocianinas protectoras",
+      "Favorece la salud cardiovascular y circulación",
+      "Exquisito bouquet aromático frutal y aterciopelado",
+      "Ideal para celebraciones y brindis saludables"
     ],
     ingredients: [
-      "Jugo puro fermentado de Arándano silvestre",
-      "Antioxidantes naturales de uva de guarda"
+      "Mosto fermentado de Arándano silvestre (Vaccinium myrtillus)",
+      "Levaduras enológicas seleccionadas"
     ],
     usageInstructions: [
-      "Servir a temperatura entre 14°C y 16°C.",
-      "Disfrutar con moderación como acompañamiento gastronómico."
+      "Servir frío (12°C - 15°C) como aperitivo o digestivo."
     ],
-    tags: ["vino", "arándano", "licor", "resveratrol", "gourmet"]
+    tags: ["vino", "arándano", "resveratrol", "licor funcional"]
   },
   {
     id: 8,
-    name: "Café Trébol (Salud Femenina y Hormonal)",
-    slug: "cafe-trebol-salud-femenina-hormonal",
+    name: "Trébol Coffee (Café Trébol)",
+    slug: "trebol-coffee",
     category: "Alimentos",
-    rawMaterial: "Café Arábica Colombiano & Trébol Rojo (Isoflavonas)",
-    presentation: "Caja con 12 sobres de café gourmet funcional",
-    publicPrice: 21.00,
-    partnerPrice: 14.50,
-    bv: 7.25,
+    rawMaterial: "Plantas medicinales",
+    presentation: "12 sobres de 15 gramos c/u",
+    publicPrice: 23.00,
+    partnerPrice: 16.00,
+    bv: 8.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.cafeTrebolJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.cafeTrebolPng)
     ],
-    shortDescription: "Café funcional enriquecido con trébol rojo para equilibrar las hormonas femeninas, mitigar síntomas del climaterio y realzar el brillo natural.",
-    fullDescription: "Especialmente diseñado para la mujer moderna. El extracto de trébol rojo aporta fitoestrógenos naturales que regulan los desbalances hormonales durante la perimenopausia y menopausia, reduciendo sofocos nocturnos, cambios de humor y pérdida de densidad ósea.",
+    shortDescription: "Café gourmet enriquecido con trébol y hierbas medicinales orientales para la vitalidad, microcirculación y calma mental.",
+    fullDescription: "Mezcla de café arábica premium con extractos bioactivos de plantas adaptógenas y trébol que mejoran la respuesta al estrés y estimulan la vitalidad.",
     benefits: [
-      "Alivia eficazmente los sofocos y sudores nocturnos de la menopausia",
-      "Equilibra el estado anímico y favorece un sueño reparador",
-      "Contribuye a la fijación de calcio en los huesos de las mujeres",
-      "Sabor suave y aromático a café arábica premium con crema vegetal"
+      "Energía sostenida sin taquicardia ni acidez",
+      "Mejora la claridad mental y el estado de ánimo",
+      "Propiedades adaptógenas reguladoras",
+      "Sabor profundo y cremosa textura"
     ],
     ingredients: [
-      "Café soluble premium",
-      "Extracto estandarizado de Trébol Rojo (Trifolium pratense)",
-      "Crema no láctea de origen vegetal",
-      "Polvo de Arándano"
+      "Café arábica soluble premium",
+      "Extracto de Trébol y plantas medicinales",
+      "Crema vegetal no láctea"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en 150 ml de agua caliente.",
-      "Consumir 1 a 2 tazas al día, idealmente por la mañana o media tarde."
+      "Disolver 1 sobre en 150 ml de agua caliente a 85°C."
     ],
-    tags: ["café", "mujer", "trébol rojo", "menopausia", "hormonas"]
+    tags: ["café", "trébol", "plantas medicinales", "energía"]
   },
   {
     id: 9,
-    name: "Cordyceps Coffee Cream (Café con Cordyceps y Crema)",
-    slug: "cordyceps-coffee-cream-cafe-con-cordyceps",
+    name: "Cordyceps Coffee Cream (Café Cordyceps con Crema)",
+    slug: "cordyceps-coffee-cream",
     category: "Alimentos",
-    rawMaterial: "Café Gourmet, Cordyceps Sinensis & Crema No Láctea",
-    presentation: "Caja con 12 sobres individuales",
-    publicPrice: 22.00,
-    partnerPrice: 15.40,
-    bv: 7.70,
+    rawMaterial: "Cordyceps Sinensis",
+    presentation: "12 sobres de 15 gramos c/u",
+    publicPrice: 23.00,
+    partnerPrice: 16.00,
+    bv: 9.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.cafeCordycepsJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.cordycepsCoffeePng)
     ],
-    shortDescription: "Café cremoso energizante formulado con el 'Hongo Milenario Tibetano' para potenciar la resistencia física, función pulmonar y renal.",
-    fullDescription: "El hongo Cordyceps Sinensis es venerado en la medicina tradicional asiática como el tónico bioenergético por excelencia. Aumenta la producción celular de ATP, mejorando la captación de oxígeno en los pulmones y la vitalidad sexual tanto en hombres como en mujeres.",
+    shortDescription: "Café suave y cremoso con hongo Cordyceps Sinensis para potencia física, capacidad pulmonar y vigor celular.",
+    fullDescription: "El hongo tibetano Cordyceps Sinensis optimiza la oxigenación celular (producción de ATP), aumentando el rendimiento físico y la resistencia inmune.",
     benefits: [
-      "Incrementa la energía celular (ATP) y la resistencia a la fatiga",
-      "Fortalece la capacidad pulmonar y las vías respiratorias",
-      "Estimula la vitalidad y el rendimiento físico/deportivo",
-      "Nutre y protege el funcionamiento de los riñones"
+      "Incrementa la energía vital y oxigenación celular",
+      "Protege los riñones y vías respiratorias",
+      "Mejora el rendimiento atlético y reduce la fatiga",
+      "Textura suave, dulce y reconfortante"
     ],
     ingredients: [
-      "Café gourmet soluble",
-      "Extracto concentrado de micelio de Cordyceps Sinensis",
-      "Crema vegetal no láctea baja en grasas saturadas"
+      "Café Arábica seleccionado",
+      "Extracto de Cordyceps Sinensis liofilizado",
+      "Crema vegetal suave",
+      "Azúcar de caña reducida"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en 150-180 ml de agua caliente.",
-      "Tomar por la mañana para iniciar la jornada con energía duradera."
+      "Disolver 1 sobre en una taza de agua caliente."
     ],
-    tags: ["cordyceps", "café", "energía", "pulmones", "rendimiento"]
+    tags: ["cordyceps", "café con crema", "energía", "pulmones", "resistencia"]
   },
   {
     id: 10,
-    name: "BlackTea Coffee (Café con Té Negro)",
-    slug: "blacktea-coffee-cafe-con-te-negro",
+    name: "BlackTea Coffee (Café Té Negro)",
+    slug: "blacktea-coffee",
     category: "Alimentos",
-    rawMaterial: "Café Negro Fino & Té Negro de Ceilán fermentado",
-    presentation: "Caja con 12 sobres",
+    rawMaterial: "Plantas medicinales",
+    presentation: "12 sobres de 3.5 gramos c/u",
     publicPrice: 20.00,
     partnerPrice: 14.00,
     bv: 7.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.blackTeaCoffeeJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.blackTeaCoffeeP500)
     ],
-    shortDescription: "Fusión magistral de café oscuro tostado y té negro selecto para un enfoque mental sostenido sin provocar taquicardia ni picos de ansiedad.",
-    fullDescription: "La combinación de teofilina y L-teanina del té negro con los polifenoles del café produce un estado de alerta tranquila y concentración prolongada, ideal para jornadas de estudio intenso o trabajo de alto rendimiento.",
+    shortDescription: "Fusión magistral de café oscuro y té negro fermentado rico en teanina y antioxidantes para un enfoque mental lúcido.",
+    fullDescription: "Café puro mezclado con extracto de hojas de té negro añejado. Brinda cafeína equilibrada con L-teanina para una concentración serena y sin nerviosismo.",
     benefits: [
-      "Mejora la agudeza mental, la memoria de trabajo y la concentración",
-      "Aporte continuo de antioxidantes teoflavinas y ácido clorogénico",
-      "Ayuda a regular los niveles de colesterol en sangre",
-      "Sabor tostado profundo con sutiles matices amaderados"
+      "Enfoque mental prolongado y memoria activa",
+      "Favorece la termogénesis y digestión ligera",
+      "Bajo en calorías y sin azúcares añadidos",
+      "Aroma tostado y sabor con carácter"
     ],
     ingredients: [
-      "Granos de café tostado fino soluble",
-      "Extracto liofilizado de Té Negro fermentado de alta pureza",
-      "Polvo de arándano"
+      "Café soluble puro",
+      "Extracto concentrado de Té Negro fermentado"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en una taza con agua caliente a gusto.",
-      "Disfrutar durante las mañanas o previo a sesiones de trabajo intenso."
+      "Disolver 1 sobre en agua caliente al gusto."
     ],
-    tags: ["café", "té negro", "enfoque", "concentración", "antioxidante"]
+    tags: ["café negro", "té negro", "enfoque", "concentración"]
   },
   {
     id: 11,
     name: "Coffee Ceps (Café Cordyceps Sin Azúcar)",
-    slug: "coffee-ceps-cafe-cordyceps-sin-azucar",
+    slug: "coffee-ceps",
     category: "Alimentos",
-    rawMaterial: "Café Negro Puro & Extracto de Micelio de Cordyceps",
-    presentation: "Caja con 15 sobres de café negro",
-    publicPrice: 23.00,
-    partnerPrice: 16.00,
-    bv: 8.00,
+    rawMaterial: "Cordyceps Sinensis",
+    presentation: "12 sobres de 3.5 gramos c/u",
+    publicPrice: 20.00,
+    partnerPrice: 14.00,
+    bv: 7.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.cafeCordycepsCeps),
       getDriveUrl(HGW_DRIVE_ASSETS.cafeCordycepsP500)
     ],
-    shortDescription: "Versión purista de café negro sin azúcar añadida ni crema, enriquecido con cordyceps de grado terapéutico para máxima absorción bioenergética.",
-    fullDescription: "El preferido por personas con régimen cetogénico (Keto), diabéticos y amantes del café negro intenso. Proporciona todas las propiedades adaptógenas del Cordyceps en un formato cero carbohidratos netos.",
+    shortDescription: "Café negro puro 100% sin azúcar potenciado con Cordyceps Sinensis para deportistas y personas con control de glucosa.",
+    fullDescription: "La versión pura y sin endulzantes del famoso café con Cordyceps. Ideal para dietas keto, personas con diabetes y amantes del café negro intenso.",
     benefits: [
-      "Apto para dietas Keto, personas con glucosa elevada o diabéticos",
-      "Máximo estímulo a la resistencia muscular y oxigenación celular",
-      "Refuerza el sistema inmunológico frente a bacterias y virus",
-      "Cero azúcares añadidos ni rellenos artificiales"
+      "0% azúcar, 0% grasas añadidas",
+      "Apto para dietas cetogénicas y diabéticos",
+      "Aumenta la oxigenación celular y fuerza muscular",
+      "Sabor a café negro puro y vigorizante"
     ],
     ingredients: [
-      "100% Café Negro liofilizado de origen Arábica",
-      "Extracto estandarizado de Cordyceps Sinensis (polímeros activos)"
+      "Café arábica puro liofilizado",
+      "Extracto concentrado de Cordyceps Sinensis"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en 150-200 ml de agua caliente.",
-      "Endulzar al gusto con estevia o beber solo."
+      "Disolver 1 sobre en 150 ml de agua caliente."
     ],
-    tags: ["café negro", "cordyceps", "sin azúcar", "keto", "energía"]
+    tags: ["coffee ceps", "sin azúcar", "cordyceps", "keto", "diabetes"]
   },
   {
     id: 12,
-    name: "Blueberry Coffee (Café con Arándanos)",
-    slug: "blueberry-coffee-cafe-con-arandanos",
+    name: "Blueberry Coffee (Café de Arándanos)",
+    slug: "blueberry-coffee",
     category: "Alimentos",
-    rawMaterial: "Café Arábica & Polvo de Arándano Liofilizado Canadiense",
-    presentation: "Caja con 12 sobres",
-    publicPrice: 21.50,
-    partnerPrice: 15.00,
-    bv: 7.50,
+    rawMaterial: "Arandanos",
+    presentation: "12 sobres de 15 gramos c/u",
+    publicPrice: 23.00,
+    partnerPrice: 16.00,
+    bv: 9.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     bestSeller: true,
@@ -523,150 +497,146 @@ export const HGW_PRODUCTS: HGWProduct[] = [
       getDriveUrl(HGW_DRIVE_ASSETS.blueberryCoffeeJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.blueberryCoffeeP500)
     ],
-    shortDescription: "El icónico café funcional antioxidante de HGW. Combina la pasión del café aromático con el escudo protector de los arándanos.",
-    fullDescription: "Una combinación única y patentada que neutraliza la acidez gástrica usual del café común mientras brinda una carga masiva de antocianinas protectoras para la visión, circulación y piel en cada sorbo.",
+    shortDescription: "El café antioxidante número uno de HGW: granos selectos combinados con arándano canadiense para vista y vitalidad.",
+    fullDescription: "Café gourmet enriquecido con antocianinas de arándano silvestre. Protege los vasos sanguíneos oculares, reduce la fatiga mental y brinda un aroma incomparable.",
     benefits: [
-      "No produce acidez ni reflujo estomacal gracias al pH balanceado del arándano",
-      "Protección ocular frente al brillo de pantallas y luz artificial",
-      "Promueve la microcirculación cerebral y el rejuvenecimiento cutáneo",
-      "Sabor suave y aterciopelado altamente adictivo"
+      "Protección ocular y antioxidante frente a pantallas",
+      "Energía limpia y revitalizante para el día a día",
+      "Sabor balanceado con crema suave",
+      "Uno de los productos favoritos y más vendidos de HGW"
     ],
     ingredients: [
-      "Café Arábica soluble de alta montaña",
-      "Extracto concentrado de Arándano Azul",
-      "Crema no láctea de palma sostenible",
-      "Azúcar de caña no refinada en dosis mínima"
+      "Café arábica premium",
+      "Polvo de Arándano silvestre canadiense",
+      "Crema vegetal no láctea",
+      "Polifenoles bioactivos"
     ],
     usageInstructions: [
-      "Mezclar 1 sobre en una taza con agua caliente.",
-      "Revolver bien y disfrutar en cualquier momento del día."
+      "Disolver 1 sobre en 150 ml de agua caliente."
     ],
-    tags: ["café con arándano", "arándano", "antioxidante", "suave", "visión"]
+    tags: ["café de arándano", "antioxidante", "visión", "bestseller"]
   },
   {
     id: 13,
-    name: "Lactiberry (Té Negro Cremoso con Arándanos y Probióticos)",
-    slug: "lactiberry-te-cremoso-arandano-probioticos",
+    name: "Lactiberry (Té Negro Cremoso con Arándanos)",
+    slug: "lactiberry",
     category: "Alimentos",
-    rawMaterial: "Té Negro, Extracto de Arándano & Cultivos Probióticos",
-    presentation: "Caja con 12 sobres",
-    publicPrice: 22.00,
-    partnerPrice: 15.40,
-    bv: 7.70,
+    rawMaterial: "Arandanos",
+    presentation: "10 sobres de 30 gramos c/u",
+    publicPrice: 26.00,
+    partnerPrice: 18.00,
+    bv: 9.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.lactiberryP500)
     ],
-    shortDescription: "Deliciosa bebida cremosa tipo Milk Tea con arándanos y billones de probióticos liofilizados para regenerar la flora intestinal.",
-    fullDescription: "Una bebida reconfortante que fusiona la tradición británica del té con leche con la biotecnología probiótica. Ayuda a poblar el intestino de bacterias benéficas, reduciendo la inflamación estomacal y mejorando la digestión.",
+    shortDescription: "Bebida cremosa tipo milk-tea a base de té negro selecto y arándano azul para consentir tu paladar y nutrir tus células.",
+    fullDescription: "Deliciosa bebida que une las notas aromáticas del té negro con la frescura frutal del arándano y una suave crema láctea vegetal reconstituyente.",
     benefits: [
-      "Regenera la microbiota y fortalece la barrera intestinal",
-      "Alivia gases, digestiones pesadas y acidez",
-      "Textura suave y cremosa con toque sutil de arándano",
-      "Ideal para sustituir postres o meriendas azucaradas"
+      "Exquisito sabor a té con leche estilo gourmet",
+      "Rico en polifenoles antioxidantes y antocianinas",
+      "Sensación reconfortante y saciante",
+      "Excelente para la merienda o desayuno"
     ],
     ingredients: [
-      "Extracto de Té Negro soluble",
-      "Polvo de Arándano silvestre",
-      "Probióticos microencapsulados (Lactobacillus acidophilus)",
-      "Crema vegetal no láctea"
+      "Extracto de Té Negro",
+      "Arándano azul liofilizado",
+      "Crema vegetal premium",
+      "Minerales esenciales"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en agua caliente a 80°C (evitar agua hirviendo para no dañar los probióticos).",
-      "Tomar después de las comidas principales o por la tarde."
+      "Disolver 1 sobre en 180-200 ml de agua caliente o con hielo."
     ],
-    tags: ["lactiberry", "té con leche", "probióticos", "flora intestinal", "arándano"]
+    tags: ["lactiberry", "té con leche", "arándano", "gourmet"]
   },
   {
     id: 14,
-    name: "Ashwagandha Coffee (Café con Ashwagandha)",
-    slug: "ashwagandha-coffee-cafe-con-ashwagandha",
+    name: "Ashwaganda Coffee (Café de Ashwagandha)",
+    slug: "ashwaganda-coffee",
     category: "Alimentos",
-    rawMaterial: "Café Gourmet & Raíz de Ashwagandha Orgánica (Withania somnifera)",
-    presentation: "Caja con 12 sobres",
-    publicPrice: 23.50,
-    partnerPrice: 16.50,
-    bv: 8.25,
+    rawMaterial: "Ashwaganda",
+    presentation: "12 sobres de 15 gramos c/u",
+    publicPrice: 23.00,
+    partnerPrice: 16.00,
+    bv: 8.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.ashwagandhaCoffeeJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.ashwagandhaCoffeePng)
     ],
-    shortDescription: "El café adaptógeno definitivo para reducir el cortisol, regular el estrés diario, mejorar el descanso nocturno y elevar la libido.",
-    fullDescription: "La Ashwagandha es la hierba reina del Ayurveda indio. Este café equilibra el sistema nervioso suprarrenal, ayudándote a mantener la calma bajo presión durante el día y facilitando un descanso profundo y reparador al llegar la noche.",
+    shortDescription: "Café adaptógeno con raíz de Withania Somnifera (Ashwagandha) para modular el cortisol, calmar la ansiedad y revitalizar.",
+    fullDescription: "La raíz de Ashwagandha es la reina de las hierbas adaptógenas ayurvédicas. En combinación con café gourmet, combate el agotamiento suprarrenal, reduce el estrés y fomenta un descanso reparador.",
     benefits: [
-      "Disminuye significativamente los niveles de cortisol (hormona del estrés)",
-      "Calma la ansiedad y mejora el estado de serenidad mental",
-      "Promueve un balance hormonal óptimo y vigor masculino/femenino",
-      "No causa somnolencia diurna: modula la energía adaptativa"
+      "Regula los niveles de cortisol y estrés crónico",
+      "Alivia la fatiga física y mental sin producir somnolencia",
+      "Mejora el estado anímico y la resistencia inmunológica",
+      "Sabor suave y aromático"
     ],
     ingredients: [
-      "Café arábica premium soluble",
-      "Extracto estandarizado de Ashwagandha KSM-66",
-      "Crema vegetal no láctea",
-      "Extracto de frutos rojos"
+      "Café arábica de altura",
+      "Extracto estandarizado de raíz de Ashwagandha (Withania somnifera)",
+      "Crema vegetal suave"
     ],
     usageInstructions: [
-      "Disolver 1 sobre en 150 ml de agua caliente.",
-      "Tomar a media mañana o por la tarde para descongestionar el estrés."
+      "Tomar 1 taza en la mañana o media tarde para un equilibrio antiestrés."
     ],
-    tags: ["ashwagandha", "estrés", "cortisol", "adaptógeno", "ansiedad"]
+    tags: ["ashwagandha", "antiestrés", "adaptógeno", "cortisol", "café"]
   },
   {
     id: 15,
-    name: "Ganoderma Soluble Coffee (Café con Ganoderma Lucidum)",
-    slug: "ganoderma-soluble-coffee-cafe-con-ganoderma",
+    name: "Ganoderma Soluble Coffee (Café Soluble de Ganoderma)",
+    slug: "ganoderma-soluble-coffee",
     category: "Alimentos",
-    rawMaterial: "Café Arábica & Extracto de Hongo Reishi Rojo (Ganoderma)",
-    presentation: "Caja con 12 sobres",
-    publicPrice: 22.00,
-    partnerPrice: 15.40,
-    bv: 7.70,
+    rawMaterial: "Ganoderma Lucidum",
+    presentation: "12 sobres de 15 gramos c/u",
+    publicPrice: 23.00,
+    partnerPrice: 16.00,
+    bv: 9.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.cafeGanodermaJpg),
-      getDriveUrl(HGW_DRIVE_ASSETS.cafeGanodermaP500)
+      getDriveUrl(HGW_DRIVE_ASSETS.cafeGanodermaP500),
+      getDriveUrl(HGW_DRIVE_ASSETS.berryGanoP500)
     ],
-    shortDescription: "Café enriquecido con el hongo milenario Reishi (Ganoderma), el más poderoso inmunomodulador y desintoxicante hepático de la naturaleza.",
-    fullDescription: "El Ganoderma Lucidum contiene más de 200 fitoquímicos bioactivos y 150 antioxidantes, incluidos betaglucanos y triterpenos. Ayuda a regular la presión arterial, desintoxica el hígado graso y modula el sistema inmune contra células anormales.",
+    shortDescription: "El legendario café con Ganoderma Lucidum (Reishi) rojo para desintoxicar el hígado, elevar defensas y regular la tensión.",
+    fullDescription: "Contiene extracto puro del hongo Ganoderma Lucidum, hongo venerado por milenios por sus polisacáridos inmunomoduladores y triterpenos protectores del sistema hepático y cardiovascular.",
     benefits: [
-      "Potente acción inmunomoduladora y antitumoral preventiva",
-      "Desintoxica y regenera las células del hígado",
-      "Regula los niveles de presión arterial y glucosa en sangre",
-      "Neutraliza el estrés oxidativo y retrasa el envejecimiento"
+      "Fortalece el sistema inmunitario de manera integral",
+      "Favorece la desintoxicación hepática y celular",
+      "Regula la presión arterial y colesterol sanguíneo",
+      "Aporta vitalidad y longevidad celular"
     ],
     ingredients: [
-      "Café arábica descafeinado o regular gourmet",
-      "Extracto concentrado de cuerpo fructífero de Ganoderma Lucidum rojo",
-      "Crema vegetal de coco/palma no transgénica"
+      "Café soluble arábica",
+      "Extracto concentrado de Ganoderma Lucidum rojo",
+      "Crema vegetal no láctea"
     ],
     usageInstructions: [
-      "Verter el contenido de 1 sobre en una taza con agua caliente.",
-      "Consumir 1 a 2 veces al día para mantener una óptima defensa celular."
+      "Disolver 1 sobre en 150 ml de agua caliente por la mañana o tarde."
     ],
-    tags: ["ganoderma", "reishi", "café", "inmunidad", "hígado", "antioxidante"]
+    tags: ["ganoderma", "reishi", "café de ganoderma", "inmunidad", "hígado"]
   },
   {
     id: 16,
-    name: "Blueberry Soy Protein Powder (Proteína de Soja con Arándanos)",
-    slug: "blueberry-soy-protein-powder-proteina-de-soja",
+    name: "Blueberry Soy Protein Powder (Proteína de Soja con Arándanos en Polvo)",
+    slug: "blueberry-soy-protein-powder",
     category: "Alimentos",
-    rawMaterial: "Aislado de Proteína de Soja No Transgénica & Arándano",
-    presentation: "Bote de 500g con cuchara dosificadora",
-    publicPrice: 42.00,
-    partnerPrice: 29.50,
-    bv: 14.75,
+    rawMaterial: "Arandanos",
+    presentation: "10 sobres de 30 gramos c/u",
+    publicPrice: 36.00,
+    partnerPrice: 25.00,
+    bv: 15.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
@@ -675,293 +645,276 @@ export const HGW_PRODUCTS: HGWProduct[] = [
       getDriveUrl(HGW_DRIVE_ASSETS.proteinaSoyaPolvo),
       getDriveUrl(HGW_DRIVE_ASSETS.proteinaSoyaNoBg)
     ],
-    shortDescription: "Proteína vegetal aislada de altísimo valor biológico (90% pureza) combinada con antioxidantes de arándano para masa muscular y saciedad.",
-    fullDescription: "Fórmula hiperproteica vegetal de fácil digestión, libre de lactosa y colesterol. Ideal para deportistas, personas en control de peso, adultos mayores que buscan preservar su masa magra o personas en recuperación nutricional.",
+    shortDescription: "Aislado proteico vegetal de soya no-OGM enriquecido con arándano y aminoácidos esenciales para masa muscular y saciedad.",
+    fullDescription: "Nutrición celular completa de alta digestibilidad. Proporciona proteína vegetal pura, isoflavonas y antioxidantes para mantener la masa muscular, apoyar la nutrición de adultos mayores y atletas.",
     benefits: [
-      "Aporta 18 aminoácidos esenciales para la construcción y tono muscular",
-      "Brinda saciedad prolongada ayudando al control calórico",
-      "0% lactosa y 0% colesterol: no causa pesadez digestiva",
-      "Favorece la regeneración tisular y la producción de anticuerpos"
+      "Aporte proteico vegetal de alto valor biológico",
+      "Mantiene y tonifica la masa muscular magra",
+      "Control de saciedad en planes de control de peso",
+      "0% colesterol, libre de lactosa y fácil digestión"
     ],
     ingredients: [
-      "Aislado de proteína de soya no modificada genéticamente (Non-GMO)",
-      "Polvo concentrado de Arándano silvestre",
-      "Lecitina vegetal de soya",
-      "Vitaminas del complejo B"
+      "Aislado de proteína de soja no-OGM",
+      "Extracto liofilizado de Arándano silvestre",
+      "Vitaminas del complejo B",
+      "Minerales esenciales (Calcio, Magnesio, Zinc)"
     ],
     usageInstructions: [
-      "Mezclar 1 a 2 medidas (scoops) en 250 ml de agua, leche vegetal o batido frutal.",
-      "Tomar después del entrenamiento o como desayuno nutritivo."
+      "Mezclar 1 sobre en 250 ml de agua, leche vegetal o batidos de frutas."
     ],
-    tags: ["proteína", "soya", "arándano", "músculo", "vegano", "fitness"]
+    tags: ["proteína", "soya", "arándano", "músculo", "nutrición"]
   },
   {
     id: 17,
     name: "Ganoderma Candy (Caramelos de Ganoderma)",
-    slug: "ganoderma-candy-caramelos-de-ganoderma",
+    slug: "ganoderma-candy",
     category: "Alimentos",
-    rawMaterial: "Extracto de Ganoderma Lucidum & Polifenoles",
-    presentation: "Frasco con 60 caramelos funcionales",
-    publicPrice: 6.00,
-    partnerPrice: 4.20,
-    bv: 2.10,
+    rawMaterial: "Ganoderma Lucidum",
+    presentation: "60 caramelos por frasco",
+    publicPrice: 8.30,
+    partnerPrice: 5.80,
+    bv: 2.90,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.ganubiCandyPng),
-      getDriveUrl(HGW_DRIVE_ASSETS.berryGanoP500)
+      getDriveUrl(HGW_DRIVE_ASSETS.ganubiCandyPng)
     ],
-    shortDescription: "Caramelos bioactivos con extracto de Ganoderma Lucidum para refrescar la garganta y fortalecer el sistema inmune en cualquier lugar.",
-    fullDescription: "Una manera deliciosa y práctica de consumir los polisacáridos del hongo Reishi a diario. Ideales para aliviar la garganta irritada, combatir el mal aliento bacteriano y mantener las defensas biológicas altas.",
+    shortDescription: "Caramelos bioactivos con Ganoderma Lucidum para garganta, defensas y protección frente a cambios de clima.",
+    fullDescription: "Prácticos caramelos que liberan triterpenos y betaglucanos directamente en la mucosa bucofaríngea, aliviando la carraspera y respaldando las defensas.",
     benefits: [
-      "Alivia la carraspera y la resequedad en la garganta",
-      "Aporte constante de betaglucanos inmunoestimulantes",
-      "Refresca el aliento y protege la mucosa orofaríngea",
-      "Cómodos para llevar al trabajo, viajes o escuela"
+      "Protege y suaviza la garganta irritada",
+      "Refuerzo inmune práctico y delicioso",
+      "Aporta antioxidantes de Ganoderma en cualquier lugar"
     ],
     ingredients: [
-      "Extracto purificado de Ganoderma Lucidum",
-      "Isomaltitol de bajo índice glucémico",
-      "Mentol botánico natural",
-      "Extracto de frutos del bosque"
+      "Extracto de Ganoderma Lucidum",
+      "Isomaltitol",
+      "Extractos herbales suavizantes"
     ],
     usageInstructions: [
-      "Disolver lentamente 1 caramelo en la boca de 2 a 3 veces al día."
+      "Disolver 1 caramelo lentamente en la boca 2 a 3 veces al día."
     ],
-    tags: ["caramelos", "ganoderma", "garganta", "inmunidad", "defensas"]
+    tags: ["ganoderma", "caramelos", "garganta", "inmunidad"]
   },
   {
     id: 18,
-    name: "Coffee Candy (Caramelos de Café)",
-    slug: "coffee-candy-caramelos-de-cafe",
+    name: "Coffee Candy (Caramelo De Café)",
+    slug: "coffee-candy",
     category: "Alimentos",
-    rawMaterial: "Extracto Puro de Café Arábica & Antioxidantes",
-    presentation: "Frasco con 60 caramelos",
+    rawMaterial: "Café Arabiga",
+    presentation: "60 caramelos por frasco",
     publicPrice: 5.80,
     partnerPrice: 4.00,
     bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.coffeeCandyJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.coffeeCandyPng),
       getDriveUrl(HGW_DRIVE_ASSETS.coffeeCandyHgwPng)
     ],
-    shortDescription: "Caramelos masticables de café intenso que brindan un disparo de energía, concentración y lucidez instantánea sin necesidad de una taza.",
-    fullDescription: "El auténtico sabor del café tostado encapsulado en un caramelo duro bioactivo. Perfecto para conductores, estudiantes y oficinistas que necesitan vencer el cansancio diurno y mantenerse alertas.",
+    shortDescription: "Caramelos de café arábica tostado natural para mantenerse despierto, enfocado y con aliento fresco.",
+    fullDescription: "Elaborados con café arábica de primera selección. Ideales para conductores, estudiantes y jornadas intensas de trabajo.",
     benefits: [
-      "Despierta los sentidos y combate la somnolencia al instante",
-      "Sabor a café espresso gourmet auténtico y duradero",
-      "Bajo aporte calórico y libre de grasas hidrogenadas",
-      "Práctico para llevar en el auto o maletín"
+      "Alerta mental y activación inmediata",
+      "Sabor auténtico a espresso gourmet",
+      "Práctico frasco para viaje o escritorio"
     ],
     ingredients: [
-      "Extracto de granos de café Arábica",
-      "Isomaltosa natural",
-      "Leche desnatada en polvo",
-      "Polifenoles de café"
+      "Extracto de café arábica puro",
+      "Isomaltitol",
+      "Aroma natural de café"
     ],
     usageInstructions: [
-      "Consumir cuando se requiera concentración o recarga de energía."
+      "Disfrutar 1 caramelo cuando se requiera concentración o recarga de energía."
     ],
-    tags: ["caramelos de café", "café", "energía", "alerta", "concentración"]
+    tags: ["caramelos", "café", "energía", "enfoque"]
   },
   {
     id: 19,
-    name: "Biolacti Candy (Caramelos con Probióticos)",
-    slug: "biolacti-candy-caramelos-con-probioticos",
+    name: "Biolacti Candy (Caramelo Biolacti)",
+    slug: "biolacti-candy",
     category: "Alimentos",
-    rawMaterial: "Cultivos Liofilizados de Lactobacillus & Prebióticos",
-    presentation: "Frasco con 60 tabletas masticables",
-    publicPrice: 6.50,
-    partnerPrice: 4.50,
-    bv: 2.25,
+    rawMaterial: "Probioticos",
+    presentation: "60 caramelos por frasco",
+    publicPrice: 5.80,
+    partnerPrice: 4.00,
+    bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.biolactiCandyPng),
       getDriveUrl(HGW_DRIVE_ASSETS.biolactiCandyHgw)
     ],
-    shortDescription: "Caramelos masticables de agradable sabor a yogur que aportan probióticos vivos para equilibrar la digestión y frenar infecciones estomacales.",
-    fullDescription: "Especialmente recomendados para niños y adultos con digestiones pesadas, estreñimiento recurrente o tras tratamientos con antibióticos. Cada tableta aporta millones de cepas benéficas que colonizan el tracto digestivo.",
+    shortDescription: "Caramelos con probióticos activos y prebióticos para la salud de la microbiota oral y digestiva.",
+    fullDescription: "Microorganismos benéficos en formato de caramelo bioactivo que colonizan la cavidad bucal protegiendo encías y promoviendo una digestión equilibrada.",
     benefits: [
-      "Restablece el equilibrio de la flora intestinal benéfica",
-      "Reduce la proliferación de bacterias patógenas y flatulencias",
-      "Mejora la absorción de nutrientes en el intestino delgado",
-      "Delicioso sabor lácteo a yogur natural que encanta a los niños"
+      "Favorece el equilibrio de la flora bucal y digestiva",
+      "Agradable sabor a yogur lácteo suave",
+      "Ideal para niños y adultos"
     ],
     ingredients: [
-      "Lactobacillus rhamnosus y Lactobacillus acidophilus vivos liofilizados",
-      "Inulina de achicoria (prebiótico)",
-      "Polvo de yogur natural desgrasado"
+      "Cultivos probióticos liofilizados",
+      "Fibras prebióticas",
+      "Isomaltitol"
     ],
     usageInstructions: [
-      "Masticar 1 o 2 caramelos al día, preferentemente después de las comidas."
+      "Disolver 1 a 2 caramelos al día."
     ],
-    tags: ["probióticos", "caramelos", "digestión", "niños", "flora intestinal"]
+    tags: ["probióticos", "biolacti", "microbiota", "caramelos"]
   },
   {
     id: 20,
-    name: "Gestifruit Candy (Caramelos Gestifruta)",
-    slug: "gestifruit-candy-caramelos-gestifruta",
+    name: "Gestifruit Candy (Caramelo Gestifruta)",
+    slug: "gestifruit-candy",
     category: "Alimentos",
-    rawMaterial: "Extractos de Espino Blanco (Hawthorn), Ciruela & Frutas Enzimáticas",
-    presentation: "Frasco con 60 caramelos masticables",
-    publicPrice: 6.00,
-    partnerPrice: 4.20,
-    bv: 2.10,
+    rawMaterial: "Mix herbales",
+    presentation: "60 caramelos por frasco",
+    publicPrice: 5.80,
+    partnerPrice: 4.00,
+    bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.gestifruitCandyJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.gestifruitCandyPng),
       getDriveUrl(HGW_DRIVE_ASSETS.gestifruitCandyJfif)
     ],
-    shortDescription: "Caramelos digestivos a base de espino blanco chino y enzimas frutales para aliviar empachos, acidez estomacal y digestiones lentas.",
-    fullDescription: "Inspirados en la milenaria receta tradicional de Shanzha (Espino Blanco). Estimulan la secreción de jugos gástricos y biliares para descomponer grasas y carnes pesadas rápidamente, eliminando la sensación de pesadez tras comidas copiosas.",
+    shortDescription: "Caramelos digestivos a base de frutas y enzimas botánicas para una digestión ágil y vientre plano.",
+    fullDescription: "Combinación de extractos frutales ricos en enzimas digestivas naturales como papaína y bromelina para evitar pesadez post-comida.",
     benefits: [
-      "Alivia la pesadez estomacal y el empacho casi de inmediato",
-      "Estimula la digestión de comidas grasas y proteínas pesadas",
-      "Sabor agridulce natural muy refrescante",
-      "Ayuda a regular los niveles de lípidos en sangre"
+      "Ayuda a procesar comidas pesadas o grasas",
+      "Sabor frutal cítrico refrescante",
+      "Previene gases y distensión estomacal"
     ],
     ingredients: [
-      "Extracto concentrado de Fruto de Espino Blanco (Crataegus pinnatifida)",
-      "Polvo de ciruela china (Umeboshi)",
-      "Enzimas vegetales de papaya y piña",
-      "Ácido cítrico natural"
+      "Extractos frutales bioenzimáticos",
+      "Mix botánico digestivo",
+      "Isomaltitol"
     ],
     usageInstructions: [
-      "Masticar 1 o 2 caramelos inmediatamente después de comidas pesadas."
+      "Consumir 1 caramelo después del almuerzo o cena."
     ],
-    tags: ["digestión", "espino blanco", "caramelos", "empacho", "enzimas"]
+    tags: ["digestión", "enzimas", "frutas", "caramelos"]
   },
   {
     id: 21,
-    name: "Peptipro Candy (Caramelos de Péptido de Colágeno)",
-    slug: "peptipro-candy-caramelos-peptido-colageno",
+    name: "Peptipro Candy (Caramelo Peptipro)",
+    slug: "peptipro-candy",
     category: "Alimentos",
-    rawMaterial: "Micro-péptidos de Colágeno Marino & Frutos Rojos",
-    presentation: "Frasco con 60 caramelos bioactivos",
-    publicPrice: 7.50,
-    partnerPrice: 5.25,
-    bv: 2.60,
+    rawMaterial: "Peptido de colageno",
+    presentation: "60 caramelos por frasco",
+    publicPrice: 5.80,
+    partnerPrice: 4.00,
+    bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.peptiproCandyPng)
     ],
-    shortDescription: "Bocaditos de colágeno masticables de alta asimilación para nutrir la piel, uñas y cabello sobre la marcha sin necesidad de mezclar.",
-    fullDescription: "Tu dosis diaria de belleza portátil. Con péptidos bioactivos de bajo peso molecular que se absorben a través de la mucosa oral para estimular a los fibroblastos dérmicos a generar nuevo colágeno y elastina.",
+    shortDescription: "Caramelos con péptidos de colágeno bioasimilables para hidratar y revitalizar la piel durante el día.",
+    fullDescription: "Péptidos bioactivos de colágeno en formato snack para nutrir el tejido conectivo, cabello y articulaciones de manera práctica.",
     benefits: [
-      "Aporta firmeza y luminosidad a la piel del rostro y cuerpo",
-      "Reduce la fragilidad de las uñas y estimula el crecimiento capilar",
-      "Cómodo de tomar en cualquier lugar sin necesidad de agua",
-      "Sabor delicioso a fresas silvestres y bayas"
+      "Nutrición de colágeno al alcance de tu mano",
+      "Protege contra el fotoenvejecimiento",
+      "Delicioso sabor a bayas"
     ],
     ingredients: [
-      "Péptidos bioactivos de colágeno purificado",
-      "Extracto de Arándano y Frambuesa",
-      "Vitamina C y Biotina",
-      "Xilitol amigable con los dientes"
+      "Péptidos bioactivos de colágeno",
+      "Vitamina C",
+      "Isomaltitol"
     ],
     usageInstructions: [
-      "Consumir 2 caramelos al día en cualquier momento."
+      "Consumir 1 a 2 caramelos al día."
     ],
-    tags: ["colágeno", "belleza", "caramelos", "piel", "uñas", "biotina"]
+    tags: ["colágeno", "peptipro", "piel", "caramelos"]
   },
   {
     id: 22,
-    name: "Herbal Fresh Candy (Caramelos Frescos de Hierbas)",
-    slug: "herbal-fresh-candy-caramelos-frescos-hierbas",
+    name: "Herbal Fresh Candy (Caramelo Fresco a Base de Hierbas)",
+    slug: "herbal-fresh-candy",
     category: "Alimentos",
-    rawMaterial: "Madreselva, Menta Silvestre, Eucalipto & Regaliz",
-    presentation: "Frasco con 60 caramelos balsámicos",
-    publicPrice: 5.50,
-    partnerPrice: 3.85,
-    bv: 1.90,
+    rawMaterial: "Mix herbales",
+    presentation: "60 caramelos por frasco",
+    publicPrice: 5.80,
+    partnerPrice: 4.00,
+    bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.herbalFreshCandyPng),
       getDriveUrl(HGW_DRIVE_ASSETS.herbalFreshCandyJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.herbalFreshCandyJfif)
     ],
-    shortDescription: "Caramelos balsámicos herbales de acción inmediata para despejar las vías respiratorias, aliviar la tos y proporcionar un aliento fresco polar.",
-    fullDescription: "Fórmula tradicional botánica que descongestiona la nariz tapada, alivia la irritación por fumar o aire acondicionado y desinflama las cuerdas vocales en profesores, conferencistas y cantantes.",
+    shortDescription: "Caramelos refrescantes de menta, eucalipto e hierbas medicinales para despejar vías respiratorias y refrescar el aliento.",
+    fullDescription: "Fórmula herbal descongestiva que refresca la garganta, despeja fosas nasales y neutraliza olores bucales de forma prolongada.",
     benefits: [
-      "Abre y despeja las fosas nasales y vías respiratorias",
-      "Calma la tos seca y el picor en la garganta",
-      "Elimina bacterias bucales causantes del mal aliento",
-      "Efecto refrescante prolongado y revitalizante"
+      "Aliento fresco y desinfección bucal",
+      "Despeja la respiración y alivia la resequedad de garganta",
+      "Sin azúcar que dañe los dientes"
     ],
     ingredients: [
-      "Extracto de flor de Madreselva (Lonicera japonica)",
-      "Aceite esencial de Menta Piperita y Eucalipto",
-      "Extracto de raíz de Regaliz (Glycyrrhiza glabra)",
-      "Isomaltitol vegetal"
+      "Aceite esencial de menta piperita",
+      "Extracto de eucalipto",
+      "Hierbas aromáticas purificantes",
+      "Isomaltitol"
     ],
     usageInstructions: [
-      "Disolver 1 caramelo en la boca siempre que sienta congestión o resequedad."
+      "Dejar disolver en la boca cuando se requiera frescura o alivio respiratorio."
     ],
-    tags: ["menta", "hierbas", "respiración", "tos", "garganta", "caramelos"]
+    tags: ["menta", "frescura", "respiración", "caramelos"]
   },
   {
     id: 23,
     name: "Moruva Candy (Dulces Moruva)",
-    slug: "moruva-candy-dulces-moruva",
+    slug: "moruva-candy",
     category: "Alimentos",
-    rawMaterial: "Extracto de Mora Negra (Mulberry) & Semilla de Uva (Resveratrol)",
-    presentation: "Frasco con 60 caramelos masticables",
-    publicPrice: 6.20,
-    partnerPrice: 4.35,
-    bv: 2.15,
+    rawMaterial: "Plantas medicinales",
+    presentation: "60 caramelos por frasco",
+    publicPrice: 5.80,
+    partnerPrice: 4.00,
+    bv: 2.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.moruvaCandyPng)
     ],
-    shortDescription: "Golosina funcional rica en resveratrol y proantocianidinas de mora y uva para cuidar la salud cardiovascular y capilar.",
-    fullDescription: "La combinación de hojas y frutos de morera negra con extracto de semilla de uva proporciona potentes flavonoides que ayudan a regular los picos de glucosa posprandial y protegen las paredes arteriales.",
+    shortDescription: "Caramelos botánicos a base de hojas de morera y uva silvestre para control de carbohidratos y antioxidación.",
+    fullDescription: "La hoja de morera blanca (Morus alba) contiene DNJ natural que ayuda a regular la absorción de azúcares, complementada con los polifenoles de uva.",
     benefits: [
-      "Ayuda a estabilizar la absorción de carbohidratos y glucosa",
-      "Refuerza la microcirculación en extremidades inferiores (piernas pesadas)",
-      "Poderosa acción antioxidante frente al daño solar y ambiental",
-      "Sabor a uvas negras y moras maduras"
+      "Ayuda a modular picos de glucosa tras las comidas",
+      "Rico en proantocianidinas de semilla de uva",
+      "Sabor agridulce agradable y natural"
     ],
     ingredients: [
-      "Extracto de Mora de Morera (Morus alba)",
-      "Extracto concentrado de Semilla de Uva (95% OPC)",
-      "Polifenoles de arándano",
-      "Isomaltitol purificado"
+      "Extracto de hoja de morera (Morus alba)",
+      "Extracto de uva silvestre",
+      "Isomaltitol"
     ],
     usageInstructions: [
-      "Consumir 1 a 2 caramelos antes o después de comidas ricas en carbohidratos."
+      "Tomar 1 caramelo 15 minutos antes de alimentos con almidón o azúcar."
     ],
-    tags: ["moruva", "morera", "uva", "resveratrol", "circulación", "glucosa"]
+    tags: ["morera", "uva", "glucosa", "antioxidante", "caramelos"]
   },
   {
     id: 24,
     name: "Choco Blue (Chocolate con Arándanos)",
-    slug: "choco-blue-chocolate-con-arandanos",
+    slug: "choco-blue",
     category: "Alimentos",
-    rawMaterial: "Cacao Puro Fino de Aroma & Extracto de Arándano Silvestre",
-    presentation: "Caja con tabletas gourmet individuales",
-    publicPrice: 18.00,
-    partnerPrice: 12.50,
-    bv: 6.25,
+    rawMaterial: "Arandanos",
+    presentation: "20 sobres de 33 gramos c/u",
+    publicPrice: 40.00,
+    partnerPrice: 28.00,
+    bv: 11.20,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
@@ -969,580 +922,567 @@ export const HGW_PRODUCTS: HGWProduct[] = [
       getDriveUrl(HGW_DRIVE_ASSETS.chocoBlueWebp),
       getDriveUrl(HGW_DRIVE_ASSETS.chocoBlueNoBg)
     ],
-    shortDescription: "Chocolates finos funcionales elaborados con cacao puro antioxidante y trozos de arándano liofilizado. Placer saludable sin culpa.",
-    fullDescription: "Combina los teobrominas y flavonoles estimulantes del cacao con las antocianinas del arándano. Eleva los niveles de serotonina y dopamina en el cerebro, mejorando el estado anímico y protegiendo el sistema cardiovascular.",
+    shortDescription: "Bebida chocolatada gourmet con cacao puro y arándanos silvestres para deleite, energía y nutrición cerebral.",
+    fullDescription: "Combinación de cacao fino de aroma rico en teobromina y flavonoides con extracto de arándano antioxidante. Una bebida deliciosa que nutre cuerpo y mente.",
     benefits: [
-      "Mejora el estado de ánimo, reduce la ansiedad y promueve la felicidad",
-      "Rico en polifenoles que protegen el corazón y las arterias",
-      "Elaborado con manteca de cacao pura sin grasas trans",
-      "Experiencia gourmet inigualable para regalar o consentirse"
+      "Estimula el bienestar emocional y la concentración",
+      "Potente dosis de flavonoides del cacao y arándano",
+      "Rico y cremoso para disfrutar caliente o frío",
+      "Favorito para toda la familia"
     ],
     ingredients: [
-      "Pasta de cacao fino de aroma (70%)",
-      "Manteca de cacao prensada en frío",
-      "Arándanos silvestres canadienses liofilizados",
-      "Azúcar de caña orgánica en baja proporción"
+      "Cacao puro desgrasado",
+      "Extracto de Arándano silvestre",
+      "Crema vegetal",
+      "Endulzante natural"
     ],
     usageInstructions: [
-      "Disfrutar de 1 o 2 porciones al día como snack saludable de media tarde."
+      "Disolver 1 sobre en una taza de agua o leche caliente (200 ml)."
     ],
-    tags: ["chocolate", "cacao", "arándano", "antioxidante", "ánimo", "gourmet"]
+    tags: ["chocolate", "arándano", "cacao", "antioxidante"]
   },
   {
     id: 25,
-    name: "Choco Gano (Chocolate con Ganoderma Lucidum)",
-    slug: "choco-gano-chocolate-con-ganoderma",
+    name: "Choco Gano (Chocolate con Ganoderma)",
+    slug: "choco-gano",
     category: "Alimentos",
-    rawMaterial: "Cacao Oscuro Seleccionado & Extracto de Ganoderma Rojo",
-    presentation: "Caja con tabletas gourmet individuales",
-    publicPrice: 19.00,
-    partnerPrice: 13.30,
-    bv: 6.65,
+    rawMaterial: "Ganoderma Lucidum",
+    presentation: "20 sobres de 33 gramos c/u",
+    publicPrice: 40.00,
+    partnerPrice: 28.00,
+    bv: 11.20,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
+    featured: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.chocoGanoNoBg),
       getDriveUrl(HGW_DRIVE_ASSETS.chocoGanoPng),
-      getDriveUrl(HGW_DRIVE_ASSETS.chocoGanoWebp)
+      getDriveUrl(HGW_DRIVE_ASSETS.chocoGanoWebp),
+      getDriveUrl(HGW_DRIVE_ASSETS.chocoGanoNoBg)
     ],
-    shortDescription: "Fusión irresistible de chocolate oscuro de alta pureza con los beneficios inmunológicos y adaptógenos del hongo Ganoderma Lucidum.",
-    fullDescription: "La combinación perfecta entre el placer del chocolate fino y la longevidad del Reishi. Ayuda a neutralizar el estrés del día a día, refuerza las defensas naturales y revitaliza la energía física.",
+    shortDescription: "Exquisito chocolate bioactivo enriquecido con Ganoderma Lucidum para defensas, vitalidad y calma reconfortante.",
+    fullDescription: "La mejor forma de consumir Ganoderma para quienes prefieren el chocolate sobre el café. Une el placer del chocolate caliente con las propiedades inmunoestimulantes del hongo Reishi.",
     benefits: [
-      "Estimula el sistema inmune mientras deleita el paladar",
-      "Excelente fuente de antioxidantes flavonoides y polisacáridos",
-      "Apoya la salud cerebral y la claridad mental",
-      "Sin conservadores artificiales ni grasas hidrogenadas"
+      "Favorece el sistema inmunológico y el descanso",
+      "Delicioso sabor achocolatado aterciopelado",
+      "Ideal para niños en etapa escolar y adultos",
+      "Ayuda a reducir el estrés y reconforta el cuerpo"
     ],
     ingredients: [
-      "Masa de cacao orgánico de alta pureza",
-      "Extracto soluble de hongo Ganoderma Lucidum",
-      "Manteca de cacao natural",
-      "Vainilla botánica pura"
+      "Cacao seleccionado premium",
+      "Extracto concentrado de Ganoderma Lucidum",
+      "Crema vegetal",
+      "Azúcar de caña reducida"
     ],
     usageInstructions: [
-      "Consumir 1 tableta al día como indulgencia nutritiva."
+      "Disolver 1 sobre en 200 ml de agua o leche caliente."
     ],
-    tags: ["chocolate", "ganoderma", "reishi", "inmunidad", "longevidad"]
+    tags: ["chocolate", "ganoderma", "inmunidad", "reishi"]
   },
   {
     id: 26,
-    name: "Spirulina Plus Capsule (Espirulina en Cápsulas)",
-    slug: "spirulina-plus-capsule-espirulina-en-capsulas",
+    name: "Spirulina Plus Capsule (Spirulina en Cápsula)",
+    slug: "spirulina-plus-capsule",
     category: "Suplementos",
-    rawMaterial: "Microalga Spirulina Platensis Pura & Extracto de Ginseng",
-    presentation: "Frasco con 60 cápsulas vegetales",
-    publicPrice: 35.00,
-    partnerPrice: 24.50,
-    bv: 12.25,
+    rawMaterial: "Spirulina Platensis",
+    presentation: "60 capsulas de 500 mg c/u",
+    publicPrice: 25.00,
+    partnerPrice: 17.00,
+    bv: 8.50,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.spirulinaCapsulas)
     ],
-    shortDescription: "El superalimento más completo del planeta en cápsulas. Aporta más de 100 nutrientes esenciales, proteínas, hierro y clorofila depurativa.",
-    fullDescription: "Cultivada en aguas alcalinas de máxima pureza. La Spirulina HGW está enriquecida con ficocianina y oligoelementos que combaten la anemia ferropénica, desintoxican metales pesados del cuerpo y nutren a nivel celular profundamente.",
+    shortDescription: "Superalimento milenario rico en ficocianina, hierro bioasimilable y proteínas completas para combatir anemia y fatiga.",
+    fullDescription: "Microalga Spirulina Platensis cultivada en aguas puras de manantial. Contiene más del 65% de proteína de alto valor biológico, clorofila desintoxicante y complejo B completo.",
     benefits: [
-      "Combate la anemia, la fatiga crónica y la desnutrición",
-      "Excelente aporte proteico (65% proteína vegetal de fácil absorción)",
-      "Poderoso desintoxicante de la sangre y oxigenador celular",
-      "Refuerza el sistema inmunológico e incrementa la vitalidad"
+      "Combate eficazmente la anemia y eleva los niveles de hemoglobina",
+      "Aumenta la energía celular y la resistencia física",
+      "Excelente desintoxicante de metales pesados y toxinas",
+      "Fortalece uñas, piel, cabello y sistema inmunológico"
     ],
     ingredients: [
-      "Polvo puro de Spirulina Platensis orgánica",
-      "Extracto de Ginseng Rojo",
-      "Cápsula de celulosa vegetal 100% vegetariana"
+      "Polvo 100% puro de Spirulina Platensis orgánica (500mg por cápsula)",
+      "Cápsula de celulosa vegetal"
     ],
     usageInstructions: [
-      "Tomar 2 cápsulas al día con abundante agua, 30 minutos antes de las comidas."
+      "Tomar 2 cápsulas al día con abundante agua, preferiblemente antes de las comidas."
     ],
-    tags: ["espirulina", "suplemento", "superalimento", "hierro", "anemia", "energía"]
+    tags: ["espirulina", "anemia", "hierro", "superalimento", "proteína"]
   },
   {
     id: 27,
     name: "Tourmaline Healthcare Insoles (Plantillas de Turmalina)",
-    slug: "tourmaline-healthcare-insoles-plantillas-de-turmalina",
+    slug: "tourmaline-healthcare-insoles",
     category: "Accesorios",
-    rawMaterial: "Puntos de Turmalina Bioeléctrica & Iones Negativos",
-    presentation: "1 par de plantillas recortables (Tallas 36 a 44)",
-    publicPrice: 25.00,
-    partnerPrice: 17.50,
-    bv: 8.75,
+    rawMaterial: "Turmalina",
+    presentation: "1 par",
+    publicPrice: 9.00,
+    partnerPrice: 6.00,
+    bv: 3.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.plantillasTurmalinaWebp),
       getDriveUrl(HGW_DRIVE_ASSETS.plantillasTurmalinaPng)
     ],
-    shortDescription: "Plantillas terapéuticas con puntos de presión y turmalina activa para estimular los puntos reflexológicos de los pies y activar el retorno venoso.",
-    fullDescription: "Basadas en la reflexología podal y la tecnología de iones negativos. Al caminar, la fricción y el calor corporal activan los microcristales de turmalina, emitiendo rayos infrarrojos lejanos que mejoran la circulación sanguínea de las piernas y alivian el cansancio.",
+    shortDescription: "Plantillas bioeléctricas con microcristales de turmalina para estimular zonas reflexológicas, desinflamar pies y activar circulación.",
+    fullDescription: "Diseñadas con nódulos de acupresión y partículas de turmalina negra que emiten iones negativos e infrarrojo lejano con el calor corporal, aliviando el cansancio en piernas.",
     benefits: [
-      "Estimula los puntos de acupuntura podal correspondientes a los órganos vitales",
-      "Alivia la pesadez en las piernas, hinchazón de tobillos y várices",
-      "Efecto desodorizante y antibacteriano natural para el calzado",
-      "Material transpirable, ergonómico y recortable a cualquier talla"
+      "Estimula los puntos de acupuntura en la planta del pie",
+      "Mejora el retorno venoso y reduce la hinchazón de piernas",
+      "Acción antibacteriana y desodorante contra el sudor",
+      "Recortables a cualquier talla de calzado"
     ],
     ingredients: [
-      "Tejido transpirable de alta resistencia",
-      "Micro-nódulos de polvo de turmalina bioactiva",
-      "Capa amortiguadora de EVA de alto impacto"
+      "Matriz de polímero ergonómico flexible",
+      "Micro-gránulos de Turmalina piezoeléctrica",
+      "Tejido transpirable hipoalergénico"
     ],
     usageInstructions: [
-      "Recortar según la línea de la talla de su calzado habitual.",
-      "Colocar dentro de los zapatos con los nódulos de turmalina hacia arriba."
+      "Recortar a la talla adecuada y colocar dentro del calzado de uso diario."
     ],
-    tags: ["plantillas", "turmalina", "pies", "circulación", "reflexología"]
+    tags: ["turmalina", "plantillas", "reflexología", "circulación", "pies"]
   },
   {
     id: 28,
-    name: "Tourmaline Self-Heating Knee Protector (Rodillera Térmica de Turmalina)",
-    slug: "tourmaline-self-heating-knee-protector-rodillera-termica",
+    name: "Tourmaline Self-Heating Knee Protector (Protector de Rodilla Autocalentable de Turmalina)",
+    slug: "tourmaline-self-heating-knee-protector",
     category: "Accesorios",
-    rawMaterial: "Matriz de Turmalina Autocalentable & Imanes Terapéuticos",
-    presentation: "1 par de rodilleras ajustables con velcro",
-    publicPrice: 48.00,
-    partnerPrice: 33.60,
-    bv: 16.80,
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
+    publicPrice: 55.00,
+    partnerPrice: 39.00,
+    bv: 15.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.protectorRodillaNoBg),
       getDriveUrl(HGW_DRIVE_ASSETS.protectorRodillaJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.protectorRodillaPiedras)
     ],
-    shortDescription: "Rodilleras autocalentables con turmalina y magnetoterapia para aliviar dolor articular, artrosis, inflamación y rigidez en minutos sin químicos.",
-    fullDescription: "Al contacto con la humedad natural de la piel, la matriz de turmalina genera una agradable sensación térmica profunda que dilata los capilares, relaja los ligamentos y acelera la regeneración del cartílago articular de la rodilla.",
+    shortDescription: "Rodillera terapéutica que genera calor profundo natural para aliviar dolor articular, artritis, meniscos y rigidez.",
+    fullDescription: "Al entrar en contacto con la piel, los puntos de turmalina reaccionan con la humedad corporal emitiendo calor infrarrojo profundo que dilata los capilares y alivia dolores articulares.",
     benefits: [
-      "Genera calor terapéutico profundo de forma 100% natural y autónoma",
-      "Alivia dolores agudos y crónicos por artritis, artrosis o lesiones deportivas",
-      "Reduce la inflamación y rigidez articular al caminar o subir escaleras",
-      "Ajuste ergonómico firme mediante correas de velcro elásticas"
+      "Alivia dolores articulares crónicos, artrosis y reumatismo",
+      "Aumenta el flujo sanguíneo y relaja tendones rígidos",
+      "Tecnología térmica autónoma sin pilas ni cables",
+      "Ajuste ergonómico con velcro resistente"
     ],
     ingredients: [
-      "Tejido elástico de neopreno transpirable",
-      "Matriz de nanopartículas de turmalina autocalentable",
-      "Imanes permanentes de neodimio de uso médico"
+      "Neopreno transpirable de alta compresión",
+      "Matriz de puntos de turmalina autocalentable",
+      "Imanes magnéticos de neodimio"
     ],
     usageInstructions: [
-      "Humedecer ligeramente la zona central con agua para acelerar el efecto térmico.",
-      "Ajustar en la rodilla durante 20 a 40 minutos según tolerancia.",
-      "Usar 1 a 2 veces al día."
+      "Humedecer ligeramente con agua tibia la zona de puntos y ajustar sobre la rodilla durante 15 a 30 minutos."
     ],
-    tags: ["rodillera", "turmalina", "artrosis", "dolor de rodilla", "calor terapéutico"]
+    tags: ["rodillera", "turmalina", "artritis", "dolor de rodilla", "calor terapéutico"]
   },
   {
     id: 29,
-    name: "Tourmaline Waist Protector (Faja Térmica Lumbar de Turmalina)",
-    slug: "tourmaline-waist-protector-faja-termica-lumbar",
+    name: "Tourmaline Waist Protector (Protector de Cintura de Turmalina)",
+    slug: "tourmaline-waist-protector",
     category: "Accesorios",
-    rawMaterial: "Turmalina Bio-Térmica & Soporte Lumbar con Imanes",
-    presentation: "1 faja lumbar ergonómica ajustable",
-    publicPrice: 65.00,
-    partnerPrice: 45.50,
-    bv: 22.75,
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
+    publicPrice: 69.00,
+    partnerPrice: 48.00,
+    bv: 19.20,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
-    bestSeller: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.protectorCinturaPiedras),
+      getDriveUrl(HGW_DRIVE_ASSETS.protectorCinturaNoBg),
       getDriveUrl(HGW_DRIVE_ASSETS.protectorCinturaJpg),
-      getDriveUrl(HGW_DRIVE_ASSETS.protectorCinturaNoBg)
+      getDriveUrl(HGW_DRIVE_ASSETS.protectorCinturaPiedras)
     ],
-    shortDescription: "Faja lumbar autocalentable que combina magnetoterapia y turmalina para desinflamar la zona lumbar, aliviar el nervio ciático y corregir postura.",
-    fullDescription: "La solución número uno para quienes sufren de lumbalgias, hernias discales, ciática o dolores por pasar muchas horas sentados. Su calor profundo descontractura los músculos espinales y desinflama los nervios lumbares.",
+    shortDescription: "Faja lumbar térmica con turmalina e imanes para alivio de lumbalgia, ciática, cólicos y soporte de columna.",
+    fullDescription: "Proporciona soporte postural lumbar mientras su matriz de turmalina genera termoterapia profunda, desinflamando nervios lumbares y músculos paravertebrales.",
     benefits: [
-      "Alivia dolores lumbares intensos, ciática y espasmos musculares",
-      "Brinda soporte ortopédico firme a la columna vertebral",
-      "El calor por infrarrojo lejano mejora la circulación en la zona renal",
-      "Fácil de poner y ajustar debajo de la ropa diaria"
+      "Alivia lumbalgias, ciática y contracturas musculares",
+      "Brinda soporte firme a la zona lumbar y columna",
+      "Alivia cólicos menstruales y molestias renales leves",
+      "Ajuste elástico doble de alta firmeza"
     ],
     ingredients: [
-      "Estructura elástica reforzada con varillas de soporte",
-      "Placa de turmalina bioenergética autocalentable",
-      "Imanes terapéuticos de ferrita"
+      "Tejido elástico de alta resistencia",
+      "Matriz dorsal de turmalina térmica",
+      "Barras estabilizadoras ergonómicas",
+      "Imanes terapéuticos integrados"
     ],
     usageInstructions: [
-      "Colocar en la zona lumbar ajustando los velcros laterales.",
-      "Dejar actuar entre 20 y 45 minutos hasta sentir el calor reconfortante."
+      "Colocar alrededor de la cintura ajustando las bandas elásticas laterales por 20 a 40 minutos al día."
     ],
-    tags: ["faja lumbar", "turmalina", "ciática", "dolor de espalda", "lumbalgia"]
+    tags: ["faja lumbar", "cintura", "turmalina", "ciática", "columna"]
   },
   {
     id: 30,
-    name: "Tourmaline Self-Heating Neck Protector (Cuellera Térmica de Turmalina)",
-    slug: "tourmaline-self-heating-neck-protector-cuellera-termica",
+    name: "Tourmaline Self-Heating Neck Protector (Protector de Cuello Autocalentable de Turmalina)",
+    slug: "tourmaline-self-heating-neck-protector",
     category: "Accesorios",
-    rawMaterial: "Puntos de Turmalina Térmica & Imanes Cervicales",
-    presentation: "1 unidad de protector cervical ajustable",
-    publicPrice: 28.00,
-    partnerPrice: 19.60,
-    bv: 9.80,
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
+    publicPrice: 16.00,
+    partnerPrice: 11.00,
+    bv: 4.40,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.protectorCuelloNoBg),
       getDriveUrl(HGW_DRIVE_ASSETS.protectorCuelloJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.protectorCuelloAlt)
     ],
-    shortDescription: "Protector cervical autocalentable para aliviar tortícolis, tensión en hombros, dolores de cabeza tensionales y contracturas por estrés.",
-    fullDescription: "Diseñado para personas que trabajan frente a ordenadores o conducen durante largas horas. Libera la tensión acumulada en las vértebras cervicales, mejorando el flujo sanguíneo hacia el cerebro y aliviando mareos y cefaleas.",
+    shortDescription: "Cuellera térmica con turmalina para aliviar cervicalgia, tortícolis, tensión por pantallas y estrés de hombros.",
+    fullDescription: "Diseñada para la zona cervical. La emisión térmica y de iones negativos afloja nudos musculares en trapecio y cuello causados por malas posturas y tensión diaria.",
     benefits: [
-      "Descontractura los músculos del cuello y hombros rápidamente",
-      "Alivia cefaleas tensionales y mareos de origen cervical",
-      "Genera calor relajante y emite iones negativos terapéuticos",
-      "Ligero, portátil y muy fácil de usar en casa o la oficina"
+      "Alivia la rigidez cervical y mareos posturales",
+      "Desinflama el cuello tras largas jornadas frente al computador",
+      "Rápida acción térmica autocalentable",
+      "Práctico y liviano para usar en casa o la oficina"
     ],
     ingredients: [
-      "Tejido de neopreno suave al tacto",
-      "Puntos de turmalina bioactiva emisores de infrarrojo lejano",
-      "Micro-imanes para magnetoterapia localizada"
+      "Tejido suave hipoalergénico",
+      "Puntos de turmalina autocalentables",
+      "Imanes biomagnéticos"
     ],
     usageInstructions: [
-      "Humedecer ligeramente con agua la cara interna para activar el calor rápido.",
-      "Ajustar en el cuello con el velcro durante 15 a 30 minutos."
+      "Ajustar suavemente en el cuello durante 15 a 20 minutos hasta sentir el calor reconfortante."
     ],
-    tags: ["cuellera", "cervical", "turmalina", "tortícolis", "estrés"]
+    tags: ["cuello", "cervical", "turmalina", "estrés", "tortícolis"]
   },
   {
     id: 31,
-    name: "Toalla Sanitaria con Turmalina Uso Noche",
-    slug: "toalla-sanitaria-con-turmalina-uso-noche",
+    name: "Toalla Sanitaria Noche (Toalla Sanitaria con Turmalina Uso Noche)",
+    slug: "toalla-sanitaria-noche",
     category: "Cuidado personal",
-    rawMaterial: "Tira de Turmalina Aniónica, Algodón Puro & Polímero Superabsorbente",
-    presentation: "Paquete con 8 toallas extra largas con alas",
-    publicPrice: 5.50,
-    partnerPrice: 3.85,
-    bv: 1.90,
+    rawMaterial: "Turmalina",
+    presentation: "8 unidades",
+    publicPrice: 4.00,
+    partnerPrice: 3.20,
+    bv: 1.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.toallaSanitariaNoche)
     ],
-    shortDescription: "Toallas higiénicas nocturnas ultra absorbentes con cinta de turmalina y aniones para un descanso seguro, sin fugas, olores ni cólicos.",
-    fullDescription: "Revolución en la higiene íntima femenina. Su chip central verde de turmalina emite más de 6.000 iones negativos por cm³, neutralizando el 99.9% de bacterias anaeróbicas causantes del mal olor e infecciones ginecológicas, mientras previene cólicos menstruales intensos.",
+    shortDescription: "Toallas higiénicas nocturnas extra largas con banda bioeléctrica de turmalina, aniones y máxima absorción.",
+    fullDescription: "Protección nocturna superior contra derrames. Su chip de turmalina y aniones neutraliza bacterias anaerobias, elimina olores y alivia cólicos menstruales nocturnos.",
     benefits: [
-      "Chip de turmalina con emisión continua de aniones antibacterianos",
-      "Alivia eficazmente cólicos e inflamaciones menstruales",
-      "Superficie de algodón 100% hipoalergénico que previene irritaciones y hongos",
-      "Polímero japonés de absorción rápida que bloquea la humedad al instante"
+      "Chip de aniones y turmalina antibacteriano",
+      "Extra larga (330 mm) para dormir con total tranquilidad",
+      "Algodón 100% orgánico transpirable que evita rozaduras",
+      "Neutraliza olores de forma natural sin fragancias químicas"
     ],
     ingredients: [
-      "Capa superficial de algodón suave no tejido",
-      "Tira bioeléctrica aniónica de turmalina",
-      "Polímero absorbente de origen natural",
-      "Capa base microperforada transpirable"
+      "Capa superficial de algodón orgánico puro",
+      "Banda aniónica con micro-turmalina",
+      "Polímero superabsorbente japonés",
+      "Lámina inferior micro-perforada transpirable"
     ],
     usageInstructions: [
-      "Usar durante la noche para una protección de hasta 10 horas continuas."
+      "Uso nocturno durante el ciclo menstrual."
     ],
-    tags: ["toalla sanitaria", "turmalina", "aniones", "higiene íntima", "noche", "mujer"]
+    tags: ["toalla sanitaria", "noche", "aniones", "turmalina", "higiene íntima"]
   },
   {
     id: 32,
-    name: "Protector Íntimo Diario con Turmalina",
-    slug: "protector-intimo-diario-con-turmalina",
+    name: "Protector Diario (Protector Íntimo Diario con Turmalina)",
+    slug: "protector-diario",
     category: "Cuidado personal",
-    rawMaterial: "Cinta de Aniones de Turmalina & Algodón Orgánico Transpirable",
-    presentation: "Paquete con 30 protectores diarios ultra delgados",
-    publicPrice: 6.00,
-    partnerPrice: 4.20,
-    bv: 2.10,
+    rawMaterial: "Turmalina",
+    presentation: "30 unidades",
+    publicPrice: 5.00,
+    partnerPrice: 3.50,
+    bv: 1.70,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    bestSeller: true,
+    featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.protectoresIntimos)
     ],
-    shortDescription: "Protectores diarios ultraligeros con turmalina aniónica para mantener la zona íntima fresca, libre de humedad, hongos e infecciones.",
-    fullDescription: "Ideal para el uso diario fuera del periodo menstrual. Regula el pH vaginal, combate el flujo anormal, previene la candidiasis y aporta frescura y confort durante toda la jornada laboral o de entrenamiento físico.",
+    shortDescription: "Protectores íntimos diarios ultra delgados con banda verde de aniones y turmalina para frescura y prevención de infecciones.",
+    fullDescription: "Ideales para el uso diario. Mantienen la zona íntima seca, oxigenada y libre de bacterias causantes de flujos e infecciones recurrentes.",
     benefits: [
-      "Previene infecciones urinarias y ginecológicas recurrentes",
-      "Neutraliza olores de forma biológica sin fragancias químicas",
-      "Ultra delgado y flexible: no se mueve ni se nota",
-      "Permite la transpiración natural de la piel evitando la humedad excesiva"
+      "Previene infecciones vaginales, hongos y bacterias",
+      "Ultra delgado y cómodo para todo el día",
+      "Transpirable y libre de cloros o blanqueadores tóxicos",
+      "Brinda frescura y seguridad continua"
     ],
     ingredients: [
-      "Cubierta de algodón puro hipoalergénico",
-      "Cinta verde de turmalina bioenergética",
-      "Adhesivo de grado alimenticio seguro"
+      "Algodón suave hipoalergénico",
+      "Banda verde de aniones y turmalina",
+      "Capa adhesiva no tóxica"
     ],
     usageInstructions: [
-      "Utilizar 1 protector al día para una frescura y protección continua."
+      "Cambiar el protector diario cada 4 a 6 horas según necesidad."
     ],
-    tags: ["protectores diarios", "turmalina", "aniones", "higiene femenina", "salud íntima"]
+    tags: ["protector diario", "turmalina", "aniones", "frescura íntima"]
   },
   {
     id: 33,
-    name: "Toalla Sanitaria con Turmalina Uso Día",
-    slug: "toalla-sanitaria-con-turmalina-uso-dia",
+    name: "Toalla Sanitaria Día (Toalla Sanitaria con Turmalina Uso Día)",
+    slug: "toalla-sanitaria-dia",
     category: "Cuidado personal",
-    rawMaterial: "Cinta de Turmalina Aniónica, Algodón Puro & Núcleo Superabsorbente",
-    presentation: "Paquete con 10 toallas regulares con alas",
-    publicPrice: 5.50,
-    partnerPrice: 3.85,
-    bv: 1.90,
+    rawMaterial: "Turmalina",
+    presentation: "10 unidades",
+    publicPrice: 5.00,
+    partnerPrice: 3.50,
+    bv: 1.70,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.toallaSanitariaDia)
     ],
-    shortDescription: "Toallas higiénicas diurnas con chip de aniones de turmalina para máxima libertad de movimiento, alivio del dolor y cero humedad.",
-    fullDescription: "Diseñadas para acompañar a la mujer activa durante sus actividades cotidianas. Su capacidad de absorción supera 3 veces a las toallas convencionales, manteniendo la piel completamente seca y protegida contra irritaciones.",
+    shortDescription: "Toallas higiénicas de día con 8 capas de protección, banda de turmalina bioeléctrica y gel absorbente instantáneo.",
+    fullDescription: "Protección diurna de alta seguridad. Su banda de turmalina emite aniones que regulan el pH íntimo, previenen inflamaciones y garantizan cero humedad.",
     benefits: [
-      "Absorción inmediata que mantiene la superficie 100% seca",
-      "Disminuye notablemente la hinchazón y molestias del ciclo menstrual",
-      "Cero plásticos tóxicos, blanqueadores con cloro o perfumes químicos",
-      "Empaque hermético individual que garantiza esterilidad absoluta"
+      "Absorbe 3 veces más que las toallas comerciales",
+      "Alivia cólicos e incomodidades menstruales",
+      "Cero humedad en contacto con la piel",
+      "Alas protectoras con fijación perfecta"
     ],
     ingredients: [
-      "Algodón virgen esterilizado",
-      "Chip bioeléctrico de turmalina",
-      "Gel de absorción de polímero natural no tóxico"
+      "Algodón natural estéril",
+      "Chip biofuncional de aniones y turmalina",
+      "Gel de absorción ultrarrápida"
     ],
     usageInstructions: [
-      "Cambiar según necesidad durante el flujo diurno."
+      "Uso durante el día en el periodo menstrual."
     ],
-    tags: ["toallas higiénicas", "turmalina", "día", "aniones", "mujer"]
+    tags: ["toalla de día", "turmalina", "aniones", "comodidad"]
   },
   {
     id: 34,
     name: "Press On Nails (Uñas Acrílicas Postizas)",
-    slug: "press-on-nails-unas-acrilicas-postizas",
+    slug: "press-on-nails",
     category: "Belleza",
-    rawMaterial: "Acrílico Eco-Friendly de Alta Resistencia & Adhesivo Hipoalergénico",
-    presentation: "Kit completo con 24 uñas de diferentes tamaños y accesorios de aplicación",
-    publicPrice: 15.00,
-    partnerPrice: 10.50,
-    bv: 5.25,
+    rawMaterial: "Accesorios de belleza",
+    presentation: "24 unidades",
+    publicPrice: 8.58,
+    partnerPrice: 6.00,
+    bv: 1.20,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.pressOnNailsPng),
       getDriveUrl(HGW_DRIVE_ASSETS.pressOnNailsHgw),
       getDriveUrl(HGW_DRIVE_ASSETS.pressOnNailsPostizas)
     ],
-    shortDescription: "Uñas postizas de calidad de salón con diseños en tendencia. Aplicación en 5 minutos sin dañar la uña natural ni necesidad de lámpara UV.",
-    fullDescription: "Manicura perfecta al instante desde la comodidad de casa. Fabricadas con materiales biocompatibles no tóxicos que no debilitan el lecho ungueal y ofrecen una durabilidad de hasta 2 a 3 semanas con acabado brillante profesional.",
+    shortDescription: "Set de uñas acrílicas reutilizables de alta calidad con acabado profesional de salón en minutos y sin dañar la uña natural.",
+    fullDescription: "Uñas postizas de fácil colocación con diseños elegantes y duraderos. Incluyen adhesivo de alta adherencia para lucir manos impecables sin químicos agresivos.",
     benefits: [
-      "Aplicación rápida y sencilla en menos de 5 minutos",
-      "Reutilizables y resistentes a golpes y tareas cotidianas",
-      "No maltratan ni adelgazan la uña natural",
-      "Variedad de tamaños para un ajuste perfecto en cada dedo"
+      "Manicure impecable en menos de 5 minutos",
+      "No daña la uña natural ni requiere lámpara UV",
+      "Material resistente y reutilizable",
+      "24 tamaños adaptables a cualquier forma de uña"
     ],
     ingredients: [
-      "Polímero acrílico flexible de grado cosmético",
-      "Pestañas adhesivas de silicona hipoalergénica",
-      "Lima y palillo de madera incluidos"
+      "Acrílico ABS de grado estético no tóxico",
+      "Pestañas adhesivas de fijación ultra fuerte"
     ],
     usageInstructions: [
-      "Limpiar la uña natural con alcohol, elegir el tamaño adecuado, aplicar la lámina adhesiva y presionar la uña durante 20 segundos."
+      "Limpiar la uña con alcohol, elegir el tamaño adecuado, aplicar la lámina adhesiva y presionar firmemente por 20 segundos."
     ],
-    tags: ["press on nails", "uñas postizas", "belleza", "manicura", "estética"]
+    tags: ["uñas postizas", "press on nails", "belleza", "manicura"]
   },
   {
     id: 35,
-    name: "Pulsera de Turmalina Versión Limitada (Cód. 51-57)",
-    slug: "pulsera-de-turmalina-version-limitada-51-57",
+    name: "Pulsera de Tourmalina Versión Limitada (Código del 51 al 57)",
+    slug: "pulsera-tourmalina-version-limitada",
     category: "Accesorios",
-    rawMaterial: "Cuentas pulidas de Turmalina Negra y Policroma Natural",
-    presentation: "1 unidad en estuche de terciopelo de lujo",
-    publicPrice: 35.00,
-    partnerPrice: 24.50,
-    bv: 12.25,
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
+    publicPrice: 22.00,
+    partnerPrice: 15.00,
+    bv: 9.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.pulseraTurmalina34),
+      getDriveUrl(HGW_DRIVE_ASSETS.pulseraTurmalina33),
       getDriveUrl(HGW_DRIVE_ASSETS.pulseras1024)
     ],
-    shortDescription: "Pulsera bioenergética de gemas de turmalina seleccionadas. Emite iones negativos para neutralizar la radiación electromagnética de celulares.",
-    fullDescription: "Joyería terapéutica de alta gama. La turmalina es la única piedra mineral que genera un campo bioeléctrico natural de 0.06 mA, similar a la corriente celular humana, ayudando a equilibrar el sistema nervioso y mejorar la circulación periférica.",
+    shortDescription: "Pulsera bioenergética de colección elaborada con gemas de turmalina natural para equilibrar el campo electromagnético.",
+    fullDescription: "Joya bioactiva que combina elegancia y protección. La turmalina emite frecuencias que neutralizan la radiación de celulares, Wi-Fi y reducen la fatiga en muñeca y brazo.",
     benefits: [
-      "Protección contra la contaminación electromagnética (Wi-Fi, teléfonos 5G)",
-      "Mejora la microcirculación en manos, muñecas y brazos",
-      "Armoniza los campos energéticos y reduce el estrés bioeléctrico",
-      "Diseño elegante unisex adaptable a cualquier atuendo"
+      "Protege contra la radiación electromagnética de dispositivos móviles",
+      "Alivia la tensión muscular en muñeca y túnel carpiano",
+      "Equilibra la bioenergía corporal y disminuye la pesadez",
+      "Diseño unisex refinado y ajustable"
     ],
     ingredients: [
-      "Cuentas esféricas de turmalina mineral 100% auténtica",
-      "Hilo elástico de silicona de alta tenacidad"
+      "Cuentas pulidas de Turmalina negra mineral natural",
+      "Cordón elástico de alta resistencia"
     ],
     usageInstructions: [
-      "Llevar en la muñeva izquierda para receptividad energética o derecha para protección diaria."
+      "Usar diariamente en la muñeca izquierda o derecha."
     ],
-    tags: ["pulsera", "turmalina", "energía", "iones negativos", "joyería"]
+    tags: ["pulsera", "turmalina", "edición limitada", "radiación", "energía"]
   },
   {
     id: 36,
     name: "Colgante Piedra Energética de Turmalina",
-    slug: "colgante-piedra-energetica-turmalina",
+    slug: "colgante-piedra-energetica",
     category: "Accesorios",
-    rawMaterial: "Turmalina de alta pureza mineral",
-    presentation: "1 unidad con cordón ajustable",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
     publicPrice: 50.00,
     partnerPrice: 35.00,
     bv: 21.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.colgantePiedraEnergetica)
     ],
-    shortDescription: "Colgante de cristal de turmalina bioactiva para protección áurica, armonización de chakras del corazón y garganta y neutralización de campos EMF.",
-    fullDescription: "Piedra receptiva y protectora de alto calibre. Su proximidad al timo y al chakra cardíaco favorece la sensación de serenidad, enfoque mental y escudo bio-magnético.",
+    shortDescription: "Colgante con disco volcánico de turmalina y minerales cuánticos para blindaje áurico, vitalidad y equilibrio emocional.",
+    fullDescription: "Genera un campo continuo de aniones y frecuencias cuánticas que fortalecen el biocampo humano, aumentando la fuerza muscular y la resistencia al cansancio.",
     benefits: [
-      "Potente emisión de iones negativos y rayos infrarrojos lejanos",
-      "Protege contra ondas electromagnéticas dañinas en el entorno laboral",
-      "Armoniza los centros de energía (Chakras cardíaco y de garganta)",
-      "Aporta serenidad, perspectiva y equilibrio emocional"
+      "Escudo contra el smog electromagnético y estrés ambiental",
+      "Aumenta la vitalidad y la resistencia física",
+      "Favorece la calma mental y la concentración",
+      "Diseño elegante con cordón ajustable"
     ],
     ingredients: [
-      "Cristal pulido de turmalina natural",
-      "Engaste hipoalergénico"
+      "Mineral de turmalina cuántica de alta pureza",
+      "Minerales volcánicos bioactivos",
+      "Cordón hipoalergénico"
     ],
     usageInstructions: [
-      "Colgar en el pecho a la altura del esternón. Recargar al sol matutino 1 hora semanalmente."
+      "Llevar colgado al pecho a la altura del timo o plexo solar."
     ],
-    tags: ["colgante", "turmalina", "chakras", "protección emf", "energía"]
+    tags: ["colgante", "piedra cuántica", "turmalina", "biocampo", "protección"]
   },
   {
     id: 37,
-    name: "Collar de Turmalina Versión Limitada (Cód. 51-57)",
-    slug: "collar-de-turmalina-version-limitada-51-57",
+    name: "Collar de Tourmalina Versión Limitada (Código del 51 al 57)",
+    slug: "collar-tourmalina-version-limitada",
     category: "Accesorios",
-    rawMaterial: "Cuentas de Turmalina multicolor pulida",
-    presentation: "1 unidad collar de lujo",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
     publicPrice: 43.00,
     partnerPrice: 30.00,
     bv: 18.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
-    featured: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina38),
       getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina39),
-      getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina41)
+      getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina41),
+      getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina37)
     ],
-    shortDescription: "Collar de piedras de turmalina seleccionadas. Estimula la circulación en la zona cervical, garganta y glándula tiroides.",
-    fullDescription: "Gemas mixtas naturales ensartadas con precisión artesanal. Ideal para quienes buscan unir la belleza de la joyería fina con los beneficios holísticos de la litoterapia.",
+    shortDescription: "Collar artesanal de esferas de turmalina seleccionadas para regular la circulación del cuello, hombros y pecho.",
+    fullDescription: "Edición especial de cuentas pulidas de turmalina mineral que estimulan la microcirculación de la zona cervical y tiroidea, atenuando el cansancio y la pesadez.",
     benefits: [
-      "Mejora la microcirculación cervical y linfática",
-      "Favorece el balance en la zona de la garganta y tiroides",
-      "Equilibra el campo bioeléctrico corporal",
-      "Pieza exclusiva de edición limitada"
+      "Estimula la oxigenación en cuello y hombros",
+      "Armoniza las frecuencias energéticas del cuerpo",
+      "Acabado de joyería fina de alta durabilidad"
     ],
     ingredients: [
-      "Cuentas esféricas de turmalina natural",
-      "Broche de seguridad de acero inoxidable"
+      "Gemas esféricas de turmalina natural pulida",
+      "Cierre de seguridad hipoalergénico"
     ],
     usageInstructions: [
-      "Usar como accesorio diario sobre la piel o prenda."
+      "Llevar alrededor del cuello diariamente."
     ],
-    tags: ["collar", "turmalina", "tiroides", "joyas", "infrarrojo"]
+    tags: ["collar", "turmalina", "edición limitada", "joyería cuántica"]
   },
   {
     id: 38,
-    name: "Collar de Turmalina Clásico",
-    slug: "collar-de-turmalina-clasico",
+    name: "Collar de Tourmalina Clásico",
+    slug: "collar-de-tourmalina",
     category: "Accesorios",
-    rawMaterial: "Piedra de Turmalina Negra y policroma",
-    presentation: "1 unidad collar terapéutico",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
     publicPrice: 40.00,
     partnerPrice: 28.00,
     bv: 16.80,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
+    featured: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina37),
+      getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina38),
       getDriveUrl(HGW_DRIVE_ASSETS.collarTurmalina42)
     ],
-    shortDescription: "Collar continuo de turmalina para promover la vitalidad, disipar cargas electromagnéticas y elevar el chi personal.",
-    fullDescription: "El collar clásico de HGW ayuda a personas con fatiga crónica, dolores de cabeza recurrentes o sobreexposición a computadores a reencontrar su centro y vitalidad.",
+    shortDescription: "Collar bioeléctrico de turmalina para mejorar el retorno sanguíneo cerebral, aliviar dolores de cabeza y tensión cervical.",
+    fullDescription: "Collar terapéutico de uso continuo que emite iones negativos e infrarrojo lejano, mejorando la circulación hacia la cabeza y aliviando mareos y tensión por estrés.",
     benefits: [
-      "Emisión constante de iones negativos terapéuticos",
-      "Alivia la tensión muscular en el cuello y hombros",
-      "Protección contra campos electromagnéticos",
-      "Resistente y duradero para uso continuo"
+      "Disminuye dolores de cabeza tensionales y rigidez en hombros",
+      "Favorece un sueño más profundo y reparador",
+      "Protección constante contra la radiación electromagnética"
     ],
     ingredients: [
-      "Turmalina mineral natural",
-      "Alma de hilo reforzado"
+      "Turmalina negra natural",
+      "Broche de acero inoxidable quirúrgico"
     ],
     usageInstructions: [
-      "Llevar en el cuello durante la jornada diurna."
+      "Usar de día o de noche según necesidad."
     ],
-    tags: ["collar", "turmalina clasico", "energía", "antirradiacion"]
+    tags: ["collar", "turmalina", "cervical", "migraña", "circulación"]
   },
   {
     id: 39,
-    name: "Pulsera de Turmalina Clásica",
-    slug: "pulsera-de-turmalina-clasica",
+    name: "Pulsera de Tourmalina Clásica",
+    slug: "pulsera-de-tourmalina",
     category: "Accesorios",
-    rawMaterial: "Cuentas pulidas de Turmalina",
-    presentation: "1 unidad pulsera elástica",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
     publicPrice: 20.00,
     partnerPrice: 14.00,
     bv: 8.40,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.pulseraTurmalina33),
-      getDriveUrl(HGW_DRIVE_ASSETS.pulseras1024)
+      getDriveUrl(HGW_DRIVE_ASSETS.pulseraTurmalina34),
+      getDriveUrl(HGW_DRIVE_ASSETS.pulseraTurmalina33)
     ],
-    shortDescription: "Pulsera terapéutica elástica con cuentas de turmalina para mejorar la circulación de la mano, muñeca y canalizar energía positiva.",
-    fullDescription: "Ideal para trabajadores de oficina, diseñadores o personas con síndrome de túnel carpiano que requieren estimular el flujo sanguíneo en la muñeca.",
+    shortDescription: "Pulsera bioactiva con esferas de turmalina para vitalidad en brazos, fuerza de agarre y protección electromagnética.",
+    fullDescription: "Accesorio indispensable para quienes pasan horas frente a pantallas de computadoras o teléfonos. La turmalina neutraliza la estática y alivia la pesadez en el brazo.",
     benefits: [
-      "Mejora la microcirculación periférica en muñeca y dedos",
-      "Disminuye la rigidez articular en manos",
-      "Emisión de rayos infrarrojos lejanos bioactivos",
-      "Práctica, cómoda y adaptable a cualquier muñeca"
+      "Previene molestias por uso prolongado de mouse y teclado",
+      "Estimula los puntos de pulso radial",
+      "Resistente al agua y al uso diario"
     ],
     ingredients: [
-      "Cuentas esféricas de turmalina",
-      "Elástico de alta resistencia"
+      "Esferas de turmalina de alta densidad mineral",
+      "Banda elástica de triple filamento"
     ],
     usageInstructions: [
-      "Usar en la muñeca de forma continuada."
+      "Colocar en la muñeca diariamente."
     ],
-    tags: ["pulsera", "turmalina", "muñeca", "túnel carpiano", "circulación"]
+    tags: ["pulsera", "turmalina", "ergonomía", "muñeca"]
   },
   {
     id: 40,
-    name: "Tourmaline Thermo WATERSON (Termo Alcalinizador)",
-    slug: "tourmaline-thermo-waterson-termo-alcalinizador",
+    name: "Tourmaline Thermo (WATERSON) (Termo Alcalinizador de Turmalina)",
+    slug: "tourmaline-thermo-waterson",
     category: "Equipo",
-    rawMaterial: "Filtro de Turmalina mineral, Maifanita y Acero Inoxidable 304",
-    presentation: "1 unidad termo con filtro de 500 ml",
+    rawMaterial: "Turmalina",
+    presentation: "Capacidad 500 ml",
     publicPrice: 95.00,
     partnerPrice: 65.00,
     bv: 32.50,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     bestSeller: true,
@@ -1550,316 +1490,318 @@ export const HGW_PRODUCTS: HGWProduct[] = [
       getDriveUrl(HGW_DRIVE_ASSETS.thermoTurmalinaJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.thermoTurmalinaNoBg)
     ],
-    shortDescription: "Termo ionizador que transforma el agua común ácida en agua alcalina ionizada (pH 8.5+), rica en hidrógeno y microestructurada en minutos.",
-    fullDescription: "El termo WATERSON de HGW es una obra maestra de la tecnología hídrica. Su núcleo mineral con esferas de turmalina, piedra maifan y minerales alcalinos eleva el pH del agua, reduce el potencial de óxido-reducción (ORP negativo) y genera racimos moleculares más pequeños que hidratan a nivel celular profundamente.",
+    shortDescription: "Termo de acero quirúrgico 304 que transforma agua común en agua alcalina ionizada (pH 8.5 - 9.5) con microclusters y potencial redox negativo.",
+    fullDescription: "El termo Waterson de HGW cuenta con un cartucho mineral multicapa con turmalina, zinc, plata coloidal y cerámicas infrarrojas. En solo 10 minutos, reduce el tamaño de los cúmulos moleculares de agua, elevando el pH y otorgando propiedades antioxidantes (ORP negativo) que combaten la acidez celular.",
     benefits: [
-      "Convierte el agua ácida en agua alcalina ionizada rica en minerales",
-      "Poderoso efecto antioxidante al reducir el ORP del agua",
-      "Microestructura el agua para una hidratación celular 3 veces más rápida",
-      "Elimina impurezas residuales y mejora el sabor del agua",
-      "Fabricado en acero inoxidable de grado alimenticio ultra durable"
+      "Eleva el pH del agua a un nivel alcalino saludable (8.5 - 9.5)",
+      "Genera agua microestructurada para hidratación intracelular 3x superior",
+      "Aporte de minerales esenciales (Calcio, Magnesio, Zinc)",
+      "Cuerpo de acero inoxidable 304 térmico de doble pared al vacío"
     ],
     ingredients: [
-      "Cuerpo de Acero Inoxidable doble pared al vacío",
-      "Filtro cerámico con esferas de turmalina activa y minerales traza"
+      "Acero inoxidable quirúrgico grado alimenticio 304",
+      "Filtro con bolas de Turmalina mineral ionizadora",
+      "Cerámicas bioactivas y carbón activado bacteriostático"
     ],
     usageInstructions: [
-      "Llenar con agua potable, agitar suavemente durante 30 segundos y dejar reposar de 5 a 10 minutos.",
-      "Beber el agua alcalinizada fresca durante todo el día."
+      "Llenar con agua potable, agitar suavemente durante 30 segundos y dejar reposar 10 minutos antes de beber."
     ],
-    tags: ["termo", "agua alcalina", "waterson", "turmalina", "antioxidante", "equipo"]
+    tags: ["termo waterson", "agua alcalina", "turmalina", "antioxidante", "equipo"]
   },
   {
     id: 41,
     name: "Coffee Cup (Taza Térmica para Café)",
-    slug: "coffee-cup-taza-termica-cafe",
+    slug: "coffee-cup",
     category: "Equipo",
-    rawMaterial: "Acero inoxidable aislante",
-    presentation: "1 unidad taza térmica ergonómica",
+    rawMaterial: "Articulos de hogar",
+    presentation: "1 unidad",
     publicPrice: 26.00,
     partnerPrice: 18.00,
     bv: 7.20,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.coffeeCupNoBg),
-      getDriveUrl(HGW_DRIVE_ASSETS.coffeeCupJpg)
+      getDriveUrl(HGW_DRIVE_ASSETS.coffeeCupJpg),
+      getDriveUrl(HGW_DRIVE_ASSETS.coffeeCupNoBg)
     ],
-    shortDescription: "Taza térmica elegante con tapa hermética de acero inoxidable para mantener tus cafés HGW calientes durante horas.",
-    fullDescription: "Diseñada para disfrutar tus bebidas HGW donde vayas. Conserva la temperatura óptima evitando la pérdida de aroma y sabor de tus cafés funcionales.",
+    shortDescription: "Taza térmica ergonómica con recubrimiento cerámico para mantener tus bebidas calientes o frías con sabor inalterable.",
+    fullDescription: "Diseñada para disfrutar tus cafés funcionales HGW en cualquier lugar. Conserva la temperatura por horas con tapa antifugas hermética.",
     benefits: [
-      "Mantiene bebidas calientes o frías por tiempo prolongado",
-      "Acero inoxidable de grado alimentario libre de BPA",
-      "Tapa antiderrame para auto o escritorio"
+      "Mantiene café caliente hasta por 6 horas",
+      "Interior no tóxico que no altera aromas ni sabores",
+      "Apertura cómoda de un solo toque y base antideslizante"
     ],
     ingredients: [
-      "Acero inoxidable 304",
-      "Silicona de sellado hermético"
+      "Acero inoxidable de doble capa",
+      "Recubrimiento cerámico interior",
+      "Tapa de tritán libre de BPA"
     ],
     usageInstructions: [
-      "Lavar antes del primer uso. Ideal para preparar sobres individuales de café HGW."
+      "Ideal para preparar y transportar tu café de Ganoderma, Cordyceps o Arándano."
     ],
-    tags: ["taza", "termo", "café", "equipo", "acero"]
+    tags: ["taza térmica", "café", "termo", "hogar"]
   },
   {
     id: 42,
-    name: "Hervidor Eléctrico de Acero Inoxidable (1.8 Litros)",
-    slug: "hervidor-electrico-acero-inoxidable-1-8l",
+    name: "Hervidor Eléctrico de Acero Inoxidable HGW",
+    slug: "hervidor-electrico",
     category: "Equipo",
-    rawMaterial: "Acero Inoxidable grado quirúrgico & Termostato de precisión",
-    presentation: "1 unidad hervidor eléctrico capacidad 1.8 Litros",
+    rawMaterial: "Articulos de hogar",
+    presentation: "Capacidad 1.8 Litros",
     publicPrice: 60.00,
     partnerPrice: 42.00,
     bv: 8.40,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
+    featured: true,
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.hervidorElectricoNoBg),
-      getDriveUrl(HGW_DRIVE_ASSETS.hervidorElectricoPng)
+      getDriveUrl(HGW_DRIVE_ASSETS.hervidorElectricoPng),
+      getDriveUrl(HGW_DRIVE_ASSETS.hervidorElectricoNoBg)
     ],
-    shortDescription: "Hervidor rápido de alta capacidad con apagado automático y cuerpo completo de acero inoxidable para preparar todas tus infusiones.",
-    fullDescription: "Calienta el agua en segundos de manera segura y eficiente. Su interior 100% en acero inoxidable garantiza que tus bebidas no tengan contacto con plásticos a altas temperaturas.",
+    shortDescription: "Hervidor rápido de alta eficiencia con cuerpo de acero inoxidable y apagado automático para infusiones y cafés perfectos.",
+    fullDescription: "Calienta agua en menos de 4 minutos con bajo consumo energético. Cuenta con protección contra sobrecalentamiento y filtro antisarro.",
     benefits: [
-      "Calienta agua de forma inmediata con tecnología de ebullición rápida",
-      "Apagado automático de seguridad al alcanzar los 100°C",
-      "Cuerpo de acero inoxidable higiénico y fácil de limpiar",
-      "Capacidad generosa de 1.8 litros para toda la familia"
+      "Hervido ultrarrápido en minutos",
+      "Capacidad generosa de 1.8 Litros",
+      "Apagado automático de seguridad al hervir",
+      "Acero inoxidable de grado alimentario duradero"
     ],
     ingredients: [
-      "Estructura de Acero Inoxidable",
-      "Base giratoria 360°",
-      "Elemento calefactor oculto"
+      "Cuerpo de acero inoxidable 304",
+      "Base eléctrica con giro de 360°",
+      "Control de termostato de precisión"
     ],
     usageInstructions: [
-      "Llenar con agua potable hasta la marca deseada, conectar a la base y accionar el interruptor."
+      "Conectar a la corriente eléctrica, llenar con agua y presionar el interruptor de encendido."
     ],
-    tags: ["hervidor", "tetera", "equipo", "café", "infusiones"]
+    tags: ["hervidor", "tetera eléctrica", "café", "té", "hogar"]
   },
   {
     id: 43,
-    name: "Vaso Térmico de Acero Inoxidable",
-    slug: "vaso-termico-acero-inoxidable",
+    name: "Vaso Térmico Portátil HGW",
+    slug: "vaso-termico",
     category: "Equipo",
-    rawMaterial: "Acero Inoxidable doble pared",
-    presentation: "1 unidad vaso térmico",
+    rawMaterial: "Articulos de hogar",
+    presentation: "1 unidad",
     publicPrice: 31.50,
     partnerPrice: 22.00,
     bv: 8.80,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.vasoTermicoNoBg),
-      getDriveUrl(HGW_DRIVE_ASSETS.vasoTermicoJpg)
+      getDriveUrl(HGW_DRIVE_ASSETS.vasoTermicoJpg),
+      getDriveUrl(HGW_DRIVE_ASSETS.vasoTermicoNoBg)
     ],
-    shortDescription: "Vaso térmico premium para llevar café, té o bebidas frías con máximo aislamiento de temperatura y diseño contemporáneo.",
-    fullDescription: "Aislamiento al vacío que no transpira ni calienta el exterior al tacto. Perfecto para tu día a día.",
+    shortDescription: "Vaso térmico premium con aislamiento al vacío para transportar bebidas calientes o frías con estilo y cero fugas.",
+    fullDescription: "Compacto y elegante, cabe perfectamente en portavasos de vehículos. Excelente para llevar colágeno, tés o agua alcalina a cualquier lugar.",
     benefits: [
-      "Conserva bebidas calientes hasta 6 horas y frías hasta 12 horas",
-      "Agarre ergonómico y superficie antideslizante",
-      "Material higiénico que no retiene olores ni sabores"
+      "Doble pared aislante al vacío contra condensación",
+      "Tapa hermética con boquilla ergonómica",
+      "Fácil de lavar y altamente duradero"
     ],
     ingredients: [
       "Acero inoxidable 304",
-      "Tapa con boquilla abatible"
+      "Sellos de silicona grado médico",
+      "Plásticos libres de BPA"
     ],
     usageInstructions: [
-      "Apto para bebidas frías o calientes."
+      "Lavar con agua tibia y jabón suave antes del primer uso."
     ],
-    tags: ["vaso térmico", "equipo", "bebidas", "hogar"]
+    tags: ["vaso térmico", "portátil", "viaje", "hogar"]
   },
   {
     id: 44,
     name: "Tourmaline Magnet Pillow (Almohada Magnética de Turmalina)",
-    slug: "tourmaline-magnet-pillow-almohada-magnetica-turmalina",
+    slug: "tourmaline-magnet-pillow",
     category: "Equipo",
-    rawMaterial: "Espuma viscoelástica con memoria, microimanes & Turmalina",
-    presentation: "1 unidad almohada ergonómica con funda lavable",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
     publicPrice: 89.00,
     partnerPrice: 62.00,
     bv: 18.60,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.almohadaTurmalinaNoBg)
     ],
-    shortDescription: "Almohada ergonómica con turmalina y terapia magnética. Induce sueño profundo, alinea la columna cervical y elimina tensiones.",
-    fullDescription: "Combina soporte ortopédico cervical con la emisión continua de iones negativos y campos magnéticos suaves que mejoran la oxigenación cerebral durante el sueño, reduciendo ronquidos, contracturas y fatiga al despertar.",
+    shortDescription: "Almohada cervical ergonómica de memory foam con matriz de turmalina e imanes biomagnéticos para sueño profundo y alivio del cuello.",
+    fullDescription: "Diseñada conforme a la curvatura anatómica cervical. La combinación de espuma viscoelástica, aniones de turmalina e imanes promueve la microcirculación cerebral, combatiendo insomnio, ronquidos y tensión matutina.",
     benefits: [
-      "Mejora notablemente la calidad y profundidad del sueño",
-      "Alivia tensiones acumuladas en cuello y hombros mientras duermes",
-      "Emisión continua de iones negativos y rayos infrarrojos lejanos",
-      "Diseño contorneado que alinea de forma natural las vértebras cervicales"
+      "Alineación perfecta de la columna cervical durante el sueño",
+      "Combate el insomnio crónico y favorece el sueño profundo REM",
+      "Reduce la tensión en cuello, hombros y dolores de cabeza al despertar",
+      "Funda transpirable, antiácaros e hipoalergénica"
     ],
     ingredients: [
-      "Núcleo de memoria viscoelástica ortopédica",
-      "Pastillas de turmalina bioenergética",
-      "Microimanes terapéuticos",
-      "Funda de fibra de bambú transpirable"
+      "Espuma viscoelástica de memoria de alta resiliencia",
+      "Malla interna con micro-turmalina y aniones",
+      "Imanes biomagnéticos colocados estratégicamente",
+      "Funda de tela de bambú transpirable"
     ],
     usageInstructions: [
-      "Usar como almohada principal para dormir todas las noches."
+      "Colocar bajo la cabeza para dormir bocarriba o de lado con soporte ergonómico."
     ],
-    tags: ["almohada", "sueño", "turmalina", "magnetoterapia", "insomnio", "cervical"]
+    tags: ["almohada", "turmalina", "magnetoterapia", "insomnio", "cervical"]
   },
   {
     id: 45,
-    name: "Bolígrafo Punta Gel HGW",
-    slug: "boligrafo-punta-gel-hgw",
+    name: "Pen Gel HGW (Bolígrafo Punta Gel)",
+    slug: "pen-gel",
     category: "Equipo",
-    rawMaterial: "Cuerpo metálico y tinta de gel suave",
-    presentation: "1 unidad bolígrafo ejecutivo",
+    rawMaterial: "Utiles",
+    presentation: "1 unidad",
     publicPrice: 1.43,
     partnerPrice: 1.00,
     bv: 0.30,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.penGelJpg)
     ],
-    shortDescription: "Bolígrafo fino de gel para registrar tus metas, planes de trabajo y momentos importantes con escritura fluida y elegante.",
-    fullDescription: "Accesorio oficial corporativo para socios y distribuidores. Tinta de secado rápido y trazo impecable.",
+    shortDescription: "Bolígrafo de tinta gel suave y secado rápido oficial HGW para presentaciones, firmas y anotaciones de socios.",
+    fullDescription: "Bolígrafo corporativo elegante con trazo suave y uniforme. Ideal para prospección, eventos y trabajo diario de distribuidores.",
     benefits: [
-      "Aspecto fino, ligero y elegante para presentaciones de negocio",
-      "Trazo suave y continuo sin manchas",
-      "Herramienta de trabajo profesional para el networker"
+      "Escritura ultrasuave sin manchas",
+      "Diseño corporativo con logo HGW",
+      "Económico y de larga duración"
     ],
     ingredients: [
-      "Aleación ligera",
-      "Tinta gel negra"
+      "Cuerpo de polímero liviano",
+      "Tinta gel pigmentada indeleble"
     ],
     usageInstructions: [
-      "Uso en papelería de oficina."
+      "Uso de oficina, estudio y presentaciones de negocio."
     ],
-    tags: ["boligrafo", "útiles", "oficina", "hgw"]
+    tags: ["bolígrafo", "lapicero", "útiles", "oficina"]
   },
   {
     id: 46,
-    name: "Pasta Dental con Turmalina Blanca",
-    slug: "pasta-dental-con-turmalina-blanca",
-    category: "Cuidado personal",
-    rawMaterial: "Extracto de Turmalina Blanca purificada & Minerales blanqueadores",
-    presentation: "Tubo de pasta dental bioactiva (1 unidad)",
-    publicPrice: 8.00,
-    partnerPrice: 5.00,
-    bv: 3.00,
-    currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
-    status: "Disponible",
-    featured: true,
-    bestSeller: true,
-    images: [
-      getDriveUrl(HGW_DRIVE_ASSETS.pastaTurmalinaBlancaOng),
-      getDriveUrl(HGW_DRIVE_ASSETS.pastaTurmalinaBlancaPng)
-    ],
-    shortDescription: "Dentífrico blanqueador natural con microcristales de turmalina blanca. Elimina manchas de café/té, combate el mal aliento y protege el esmalte.",
-    fullDescription: "Fórmula sin flúor abrasivo que utiliza las propiedades bioeléctricas de la turmalina blanca para disolver la placa bacteriana y restaurar la blancura natural de las piezas dentales sin desgastar el esmalte.",
-    benefits: [
-      "Ayuda al blanqueamiento progresivo de los dientes sin dañar el esmalte",
-      "Combate el mal aliento por tiempo prolongado",
-      "Deja una sensación de boca mucho más limpia, fresca y saludable",
-      "Libre de ingredientes agresivos y flúor perjudicial"
-    ],
-    ingredients: [
-      "Polvo ultrafino de turmalina blanca",
-      "Extractos de menta botánica",
-      "Carbonato de calcio purificado",
-      "Xilitol protector"
-    ],
-    usageInstructions: [
-      "Cepillar los dientes durante 2 a 3 minutos después de cada comida, al menos 3 veces al día."
-    ],
-    tags: ["pasta dental", "turmalina blanca", "blanqueamiento", "mal aliento", "higiene bucal"]
-  },
-  {
-    id: 47,
-    name: "Pasta Dental con Turmalina Negra",
+    name: "Pasta Dental con Turmalina Negra HGW",
     slug: "pasta-dental-con-turmalina-negra",
     category: "Cuidado personal",
-    rawMaterial: "Turmalina Negra & Extractos antiinflamatorios botánicos",
-    presentation: "Tubo de pasta dental bioactiva (1 unidad)",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
     publicPrice: 8.00,
     partnerPrice: 5.00,
     bv: 3.00,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
-    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.pastaTurmalinaNegraPng),
       getDriveUrl(HGW_DRIVE_ASSETS.pastaTurmalinaNegraNoBg)
     ],
-    shortDescription: "Pasta dental antiinflamatoria con turmalina negra. Combate encías sangrantes, gingivitis, inflamaciones bucales y mal aliento persistente.",
-    fullDescription: "Especialmente recomendada para personas con sensibilidad gingival, sangrado al cepillarse o periodontitis leve. La turmalina negra estimula la regeneración capilar en las encías y neutraliza bacterias bucales anaeróbicas.",
+    shortDescription: "Pasta dental con micro-partículas de turmalina negra para desinflamar encías, combatir sangrado gingival y purificar la boca.",
+    fullDescription: "Fórmula bioeléctrica que emite aniones en la cavidad oral. Ayuda a sellar túbulos dentinarios expuestos, detiene el sangrado de encías y frena el sarro bacteriano.",
     benefits: [
-      "Combate inflamaciones dentales, encías retraídas y sangrado",
-      "Acción antibacteriana profunda contra la placa y sarro",
-      "Boca fresca, desinfectada y limpia por más tiempo",
-      "Alivia la sensibilidad dental al frío o calor"
+      "Combate gingivitis, encías retraídas y sangrado al cepillar",
+      "Acción antibacteriana profunda contra la placa bacteriana",
+      "Alivia la sensibilidad dental al frío y calor",
+      "Sensación de limpieza duradera y aliento puro"
     ],
     ingredients: [
-      "Polvo mineral de turmalina negra",
-      "Extractos antiinflamatorios de hierbas chinas",
-      "Menta silvestre",
-      "Bicarbonato biocompatible"
+      "Polvo mineral purificado de Turmalina negra",
+      "Extractos botánicos antiinflamatorios",
+      "Menta natural refrescante",
+      "Silicato limpiador no abrasivo"
     ],
     usageInstructions: [
-      "Cepillar suavemente encías y dientes durante 3 minutos después de comer."
+      "Cepillar dientes y encías durante 3 minutos después de cada comida."
     ],
     tags: ["pasta dental", "turmalina negra", "gingivitis", "sangrado", "encías"]
   },
   {
-    id: 48,
-    name: "Pasta Dental con Probióticos HGW",
-    slug: "pasta-dental-con-probioticos-hgw",
+    id: 47,
+    name: "Pasta Dental con Turmalina Blanca HGW",
+    slug: "pasta-dental-con-turmalina-blanca",
     category: "Cuidado personal",
-    rawMaterial: "Probióticos orales activos & Extractos naturales",
-    presentation: "Tubo de pasta dental bioactiva (1 unidad)",
+    rawMaterial: "Turmalina",
+    presentation: "1 unidad",
+    publicPrice: 8.00,
+    partnerPrice: 5.00,
+    bv: 3.00,
+    currency: "USD",
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
+    status: "Disponible",
+    featured: true,
+    images: [
+      getDriveUrl(HGW_DRIVE_ASSETS.pastaTurmalinaBlancaOng),
+      getDriveUrl(HGW_DRIVE_ASSETS.pastaTurmalinaBlancaPng)
+    ],
+    shortDescription: "Dentífrico blanqueador natural con turmalina blanca para eliminar manchas de café, té o tabaco sin dañar el esmalte.",
+    fullDescription: "Blanqueamiento enzimático y mineral sin peróxidos agresivos. Remueve manchas superficiales devolviendo el brillo natural a tus dientes mientras protege tus encías.",
+    benefits: [
+      "Elimina manchas de café, té y sarro de forma no abrasiva",
+      "Devuelve el tono blanco natural del esmalte dental",
+      "Protege contra la formación de caries y sarro",
+      "Sabor a menta fresca energizante"
+    ],
+    ingredients: [
+      "Polvo microfino de Turmalina blanca purificada",
+      "Sílice hidratada abrillantadora no abrasiva",
+      "Aceite esencial de menta",
+      "Fluoruro bioactivo protector"
+    ],
+    usageInstructions: [
+      "Cepillar 3 veces al día para un blanqueamiento progresivo y seguro."
+    ],
+    tags: ["pasta dental", "blanqueadora", "turmalina blanca", "esmalte", "dientes blancos"]
+  },
+  {
+    id: 48,
+    name: "Pasta Dental con Probiótico HGW",
+    slug: "pasta-dental-con-probiotico",
+    category: "Cuidado personal",
+    rawMaterial: "Probioticos",
+    presentation: "1 unidad",
     publicPrice: 8.00,
     partnerPrice: 5.00,
     bv: 2.50,
     currency: "USD",
-    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US"],
+    availableCountries: ["PA", "PE", "CO", "BO", "EC", "MX", "CL", "GT", "SV", "CR", "US", "ES", "PY", "DO"],
     status: "Disponible",
     featured: true,
+    bestSeller: true,
     images: [
       getDriveUrl(HGW_DRIVE_ASSETS.pastaProbioticosJpg),
       getDriveUrl(HGW_DRIVE_ASSETS.pastaProbioticosPng)
     ],
-    shortDescription: "Dentífrico de avanzada que aporta bacterias benéficas para equilibrar la microbiota oral, frenar microbios nocivos y prevenir caries.",
-    fullDescription: "Revolución en la odontología biológica. En lugar de matar todas las bacterias con químicos fuertes, introduce probióticos específicos que compiten contra los microbios que causan sarro, caries y mal aliento, protegiendo tus encías de forma natural.",
+    shortDescription: "Revolucionaria pasta con bacterias probióticas benéficas (Lactobacillus) para equilibrar la microbiota oral y frenar el mal aliento.",
+    fullDescription: "Innovación en salud bucal. En lugar de barrer toda la flora bacteriana con químicos agresivos, aporta probióticos orales vivos que desplazan microbios causantes de caries, sarro y halitosis.",
     benefits: [
-      "Equilibra la flora bacteriana saludable de la cavidad bucal",
-      "Aporta bacterias buenas que frenan microbios patógenos",
-      "Reduce la formación de placa bacteriana y frena la gingivitis",
-      "Disminuye el mal aliento crónico y protege la salud de las encías"
+      "Equilibra y regenera la microbiota oral benéfica",
+      "Frena las bacterias causantes de caries y placa",
+      "Combate el mal aliento (halitosis) de raíz",
+      "Protege encías sensibles de forma biocompatible"
     ],
     ingredients: [
-      "Lactobacillus paracasei orales liofilizados",
-      "Minerales remineralizantes",
+      "Cultivos probióticos orales liofilizados (Lactobacillus paracasei)",
+      "Minerales remineralizantes biocompatibles",
       "Menta suave natural"
     ],
     usageInstructions: [
-      "Cepillar diariamente después de cada comida."
+      "Cepillar dientes y encías diariamente después de comer."
     ],
     tags: ["pasta probiótica", "probióticos", "microbiota oral", "caries", "dientes"]
   }
 ];
 
 export const RAW_MATERIALS = [
-  { id: 'arandano', name: 'Arándano (Blueberry)', count: 9 },
-  { id: 'turmalina', name: 'Turmalina Bioeléctrica', count: 11 },
-  { id: 'ganoderma', name: 'Ganoderma Lucidum', count: 6 },
-  { id: 'colageno', name: 'Colágeno Hidrolizado & Péptidos', count: 4 },
-  { id: 'probioticos', name: 'Probióticos & Fibras', count: 4 },
-  { id: 'hierbas', name: 'Extractos Botánicos & Frutas', count: 8 },
-  { id: 'equipos', name: 'Tecnología & Filtración', count: 6 }
+  { id: 'arandanos', name: 'Arándanos', count: 10 },
+  { id: 'turmalina', name: 'Turmalina', count: 14 },
+  { id: 'ganoderma', name: 'Ganoderma Lucidum', count: 4 },
+  { id: 'cordyceps', name: 'Cordyceps Sinensis', count: 2 },
+  { id: 'probioticos', name: 'Probióticos', count: 2 },
+  { id: 'herbales', name: 'Mix Herbales & Plantas', count: 6 },
+  { id: 'hogar', name: 'Artículos de Hogar & Equipo', count: 4 },
+  { id: 'espirulina', name: 'Spirulina Platensis', count: 1 }
 ];
 
 export function getProductBySlug(slug: string): HGWProduct | undefined {

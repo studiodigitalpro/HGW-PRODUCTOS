@@ -143,16 +143,13 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 5: Países & Legal */}
+          {/* Col 5: Información Legal & Confianza */}
           <div className="space-y-2.5">
-            <h4 className="font-bold text-white uppercase tracking-wider text-[11px]">Países & Legal</h4>
+            <h4 className="font-bold text-white uppercase tracking-wider text-[11px]">Soporte & Legal</h4>
             <ul className="space-y-1.5 text-slate-400">
-              <li><button onClick={() => navigate('/paises')} className="hover:text-emerald-400 transition-colors font-medium text-slate-200">Red de Países en América</button></li>
-              <li><button onClick={() => navigate('/paises/panama')} className="hover:text-emerald-400 transition-colors">Panamá (🇵🇦)</button></li>
-              <li><button onClick={() => navigate('/paises/peru')} className="hover:text-emerald-400 transition-colors">Perú (🇵🇪)</button></li>
-              <li><button onClick={() => navigate('/paises/colombia')} className="hover:text-emerald-400 transition-colors">Colombia (🇨🇴)</button></li>
-              <li><button onClick={() => navigate('/paises/mexico')} className="hover:text-emerald-400 transition-colors">México (🇲🇽)</button></li>
-              <li><button onClick={() => navigate('/paises/bolivia')} className="hover:text-emerald-400 transition-colors">Bolivia (🇧🇴)</button></li>
+              <li><button onClick={() => navigate('/oficinas')} className="hover:text-emerald-400 transition-colors font-medium text-slate-200">Sedes & Oficinas</button></li>
+              <li><button onClick={() => navigate('/servicio-al-cliente')} className="hover:text-emerald-400 transition-colors">Centro de Ayuda</button></li>
+              <li><button onClick={() => navigate('/contacto')} className="hover:text-emerald-400 transition-colors">Contáctanos</button></li>
               <li><button onClick={() => navigate('/terminos')} className="hover:text-emerald-400 transition-colors">Términos de Uso</button></li>
               <li><button onClick={() => navigate('/privacidad')} className="hover:text-emerald-400 transition-colors">Política de Privacidad</button></li>
             </ul>

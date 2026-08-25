@@ -5,30 +5,37 @@ import {
   Phone, 
   Clock, 
   Search, 
-  Globe, 
   CheckCircle2, 
-  MessageCircle, 
-  ExternalLink,
-  Navigation,
-  ShieldCheck,
-  UserCheck,
-  ArrowRight,
-  Info
+  ShieldCheck, 
+  UserCheck, 
+  ArrowRight, 
+  Info, 
+  Copy, 
+  Check, 
+  X, 
+  Layers, 
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { HGW_OFFICES, getAllOfficeCountries } from '../data/officesData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { updatePageSEO } from '../utils/seo';
+import { HGWOffice } from '../types';
+import { SITE_CONFIG } from '../config/siteConfig';
 
 export const OfficesPage: React.FC = () => {
   const { openRegistrationModal } = useApp();
   const [selectedCountryCode, setSelectedCountryCode] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedOfficeModal, setSelectedOfficeModal] = useState<HGWOffice | null>(null);
+  const [copiedPhone, setCopiedPhone] = useState<string | null>(null);
+  const [copiedAddress, setCopiedAddress] = useState<string | null>(null);
 
   useEffect(() => {
     updatePageSEO({
       title: 'Directorio de Oficinas y Sedes HGW | Direcciones Oficiales y Horarios',
-      description: 'Encuentra las direcciones, horarios de atención, teléfonos y fotos de las oficinas oficiales de HGW en Panamá, Perú, Colombia, Bolivia, Ecuador, México, Guatemala, El Salvador, República Dominicana, Chile, Paraguay y España.',
+      description: 'Encuentra las direcciones, horarios de atención, teléfonos y sedes de HGW en Panamá, Perú, Colombia, Bolivia, Ecuador, México, Guatemala, El Salvador, República Dominicana, Chile, Paraguay y España.',
       canonicalUrl: 'https://hgwlatam.com/oficinas'
     });
   }, []);
@@ -54,6 +61,19 @@ export const OfficesPage: React.FC = () => {
     });
   }, [selectedCountryCode, searchTerm]);
 
+  const handleCopyText = (text: string, type: 'phone' | 'address') => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      if (type === 'phone') {
+        setCopiedPhone(text);
+        setTimeout(() => setCopiedPhone(null), 2500);
+      } else {
+        setCopiedAddress(text);
+        setTimeout(() => setCopiedAddress(null), 2500);
+      }
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8 pb-16">
       
@@ -71,7 +91,7 @@ export const OfficesPage: React.FC = () => {
             Oficinas y Centros de Distribución HGW
           </h1>
           <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
-            Localiza las sedes autorizadas para retiro inmediato de productos, activaciones de socios y atención personalizada en América Latina y Europa.
+            Localiza las sedes autorizadas para retiro inmediato de productos, activaciones de socios y atención personalizada en América Latina y Europa. Haz clic sobre cualquier oficina para ampliar los detalles.
           </p>
         </div>
       </div>
@@ -88,20 +108,20 @@ export const OfficesPage: React.FC = () => {
               ¿Vas a comprar o retirar en una oficina oficial HGW?
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Para realizar compras o retirar pedidos en cualquier sede oficial de HGW es requisito contar con un <strong className="text-slate-900">Código de Usuario Activo</strong>. Si aún no estás registrado, puedes crear tu cuenta gratis ahora mismo con el patrocinio oficial de <strong className="text-emerald-800">Yamilka Batista (Código: Yamilka507)</strong>.
+              Para realizar compras o retirar pedidos en cualquier sede oficial de HGW es requisito contar con un <strong className="text-slate-900">Código de Usuario Activo</strong>. Si aún no estás registrado, puedes crear tu cuenta gratis ahora mismo con el patrocinio oficial de <strong className="text-emerald-800">{SITE_CONFIG.SPONSOR_NAME} (Código: {SITE_CONFIG.SPONSOR_CODE})</strong>.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
             <button
-              onClick={openRegistrationModal}
+              onClick={() => openRegistrationModal('offices_notice')}
               className="px-5 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs rounded-xl shadow-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <UserCheck className="w-4 h-4" />
               <span>Crear Cuenta de Usuario</span>
             </button>
             <a
-              href="https://www.healthgreenworld.com/?userName=Yamilka507"
+              href={SITE_CONFIG.REGISTRATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-3 bg-white border border-slate-200 hover:border-emerald-300 text-slate-800 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-1.5"
@@ -168,13 +188,13 @@ export const OfficesPage: React.FC = () => {
       {/* Offices Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredOffices.map((office) => {
-          const primaryPhone = office.phones?.[0] || office.phone || '';
-          const cleanPhone = primaryPhone.replace(/[^0-9]/g, '');
+          const allPhones = (office.phones || [office.phone]).filter(Boolean) as string[];
 
           return (
             <div
               key={office.id}
-              className="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+              onClick={() => setSelectedOfficeModal(office)}
+              className="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Office Photo Header */}
@@ -206,7 +226,7 @@ export const OfficesPage: React.FC = () => {
                     <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700">
                       {office.city}
                     </span>
-                    <h3 className="font-bold text-lg text-slate-900 mt-0.5 leading-snug">
+                    <h3 className="font-bold text-lg text-slate-900 mt-0.5 leading-snug group-hover:text-emerald-800 transition-colors">
                       {office.name}
                     </h3>
                   </div>
@@ -214,7 +234,7 @@ export const OfficesPage: React.FC = () => {
                   {/* Address */}
                   <div className="p-3.5 bg-slate-50 border border-slate-100 rounded-2xl text-xs text-slate-700 flex items-start gap-2.5">
                     <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="leading-relaxed font-medium">{office.address}</span>
+                    <span className="leading-relaxed font-medium line-clamp-2">{office.address}</span>
                   </div>
 
                   {/* Contact Details & Hours */}
@@ -223,24 +243,37 @@ export const OfficesPage: React.FC = () => {
                       <Clock className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
                       <div>
                         <span className="text-slate-400 block text-[10px] uppercase font-bold">Horario de Atención:</span>
-                        <span className="text-slate-800 leading-relaxed font-medium">{office.openingHours}</span>
+                        <span className="text-slate-800 leading-relaxed font-medium line-clamp-2">{office.openingHours}</span>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2 pt-1">
                       <Phone className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
-                      <div>
-                        <span className="text-slate-400 block text-[10px] uppercase font-bold">Líneas de Contacto:</span>
-                        <div className="flex flex-wrap gap-1.5 mt-1">
-                          {(office.phones || [office.phone]).filter(Boolean).map((ph, idx) => (
-                            <a
-                              key={idx}
-                              href={`tel:${ph?.replace(/[^0-9+]/g, '')}`}
-                              className="px-2 py-0.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-mono text-[11px] font-bold rounded-md transition-colors"
-                            >
-                              {ph}
-                            </a>
-                          ))}
+                      <div className="flex-1">
+                        <span className="text-slate-400 block text-[10px] uppercase font-bold mb-1">Teléfonos de Contacto:</span>
+                        <div className="flex flex-wrap gap-1.5" onClick={(e) => e.stopPropagation()}>
+                          {allPhones.map((ph, idx) => {
+                            const isCopied = copiedPhone === ph;
+                            return (
+                              <button
+                                key={idx}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleCopyText(ph, 'phone');
+                                }}
+                                className={`px-2.5 py-1 text-xs font-mono font-bold rounded-lg border transition-all flex items-center gap-1.5 cursor-pointer ${
+                                  isCopied 
+                                    ? 'bg-emerald-600 text-white border-emerald-600' 
+                                    : 'bg-slate-100 hover:bg-emerald-50 text-slate-800 hover:text-emerald-800 border-slate-200'
+                                }`}
+                                title="Copiar número al portapapeles"
+                              >
+                                {isCopied ? <Check className="w-3 h-3 text-white" /> : <Copy className="w-3 h-3 text-slate-500" />}
+                                <span>{ph}</span>
+                                <span className="text-[10px] font-normal opacity-80">{isCopied ? '¡Copiado!' : 'Copiar'}</span>
+                              </button>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
@@ -251,41 +284,216 @@ export const OfficesPage: React.FC = () => {
               {/* Action Buttons Footer */}
               <div className="p-6 pt-0">
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${office.name} ${office.address}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-bold text-slate-600 hover:text-emerald-700 flex items-center gap-1.5 transition-colors"
+                  <button
+                    onClick={() => setSelectedOfficeModal(office)}
+                    className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1.5 transition-colors cursor-pointer"
                   >
-                    <Navigation className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>Ver en Google Maps</span>
-                  </a>
+                    <span>Ver Información y Servicios</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
 
-                  {cleanPhone ? (
-                    <a
-                      href={`https://wa.me/${cleanPhone}?text=Hola,%20deseo%20consultar%20informaci%C3%B3n%20y%20compras%20en%20la%20oficina%20HGW%20de%20${encodeURIComponent(office.city)}.`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-2xs transition-colors flex items-center gap-1.5"
-                    >
-                      <MessageCircle className="w-3.5 h-3.5" />
-                      <span>WhatsApp</span>
-                    </a>
-                  ) : (
-                    <button
-                      onClick={openRegistrationModal}
-                      className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer"
-                    >
-                      <UserCheck className="w-3.5 h-3.5" />
-                      <span>Registrarse</span>
-                    </button>
-                  )}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openRegistrationModal('office_card');
+                    }}
+                    className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-2xs transition-colors flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <UserCheck className="w-3.5 h-3.5" />
+                    <span>Registrarse</span>
+                  </button>
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+
+      {/* Office Detail Pop Up Modal */}
+      {selectedOfficeModal && (
+        <div 
+          className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/70 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+          onClick={() => setSelectedOfficeModal(null)}
+        >
+          <div 
+            className="relative bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="bg-gradient-to-r from-emerald-800 to-teal-900 text-white p-5 sm:p-6 flex items-start justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-white/20 text-white uppercase tracking-wider">
+                    {selectedOfficeModal.countryName}
+                  </span>
+                  {selectedOfficeModal.type && (
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-400 text-slate-950 uppercase tracking-wider">
+                      {selectedOfficeModal.type}
+                    </span>
+                  )}
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                  {selectedOfficeModal.name}
+                </h2>
+                <p className="text-xs text-emerald-200 mt-0.5">
+                  Ciudad: <strong className="text-white">{selectedOfficeModal.city}</strong>
+                </p>
+              </div>
+
+              <button
+                onClick={() => setSelectedOfficeModal(null)}
+                className="p-1.5 rounded-full text-emerald-200 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                aria-label="Cerrar modal"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto space-y-6">
+              
+              {/* Photo Preview if available */}
+              {selectedOfficeModal.image && (
+                <div className="h-56 sm:h-64 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200">
+                  <img 
+                    src={selectedOfficeModal.image} 
+                    alt={selectedOfficeModal.name}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* Address with Copy Button */}
+              <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-emerald-600" />
+                    Dirección Física Oficial
+                  </span>
+                  <button
+                    onClick={() => handleCopyText(selectedOfficeModal.address, 'address')}
+                    className="px-2.5 py-1 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    {copiedAddress === selectedOfficeModal.address ? (
+                      <>
+                        <Check className="w-3 h-3 text-emerald-600" />
+                        <span className="text-emerald-700 font-bold">¡Dirección Copiada!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3 h-3 text-slate-400" />
+                        <span>Copiar Dirección</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+                <p className="text-sm font-semibold text-slate-800 leading-relaxed">
+                  {selectedOfficeModal.address}
+                </p>
+              </div>
+
+              {/* Horarios & Teléfonos */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                {/* Horario */}
+                <div className="p-4 bg-emerald-50/60 border border-emerald-100 rounded-2xl space-y-2">
+                  <div className="flex items-center gap-1.5 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+                    <Clock className="w-4 h-4 text-emerald-600" />
+                    <span>Horarios de Atención</span>
+                  </div>
+                  <p className="text-xs text-slate-700 leading-relaxed font-medium">
+                    {selectedOfficeModal.openingHours}
+                  </p>
+                </div>
+
+                {/* Teléfonos con Portapapeles */}
+                <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-2xl space-y-2">
+                  <div className="flex items-center gap-1.5 text-slate-700 text-xs font-bold uppercase tracking-wider">
+                    <Phone className="w-4 h-4 text-emerald-600" />
+                    <span>Líneas Telefónicas</span>
+                  </div>
+                  <div className="space-y-1.5">
+                    {(selectedOfficeModal.phones || [selectedOfficeModal.phone]).filter(Boolean).map((ph, idx) => {
+                      const isCopied = copiedPhone === ph;
+                      return (
+                        <div key={idx} className="flex items-center justify-between bg-white p-2 rounded-xl border border-slate-200">
+                          <span className="font-mono text-xs font-bold text-slate-800">{ph}</span>
+                          <button
+                            onClick={() => handleCopyText(ph!, 'phone')}
+                            className={`px-2.5 py-1 text-xs font-bold rounded-lg transition-colors flex items-center gap-1 cursor-pointer ${
+                              isCopied 
+                                ? 'bg-emerald-600 text-white' 
+                                : 'bg-slate-100 hover:bg-emerald-100 text-slate-700 hover:text-emerald-800'
+                            }`}
+                          >
+                            {isCopied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3 text-slate-400" />}
+                            <span>{isCopied ? '¡Copiado!' : 'Copiar'}</span>
+                          </button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* Servicios disponibles en Sede */}
+              {selectedOfficeModal.services && selectedOfficeModal.services.length > 0 && (
+                <div className="space-y-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+                    <Layers className="w-4 h-4 text-emerald-600" />
+                    Servicios Disponibles en Esta Sede:
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {selectedOfficeModal.services.map((svc, idx) => (
+                      <div key={idx} className="p-2.5 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-700 flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span className="font-medium">{svc}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Requirement reminder */}
+              <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1">
+                <p className="font-bold flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-amber-700" />
+                  Importante para compras en mostrador:
+                </p>
+                <p className="text-amber-800 leading-relaxed">
+                  Indica tu código de socio o el código de patrocinio oficial <strong className="font-mono bg-white px-1.5 py-0.5 rounded border border-amber-300">{SITE_CONFIG.SPONSOR_CODE}</strong> ({SITE_CONFIG.SPONSOR_NAME}) al presentarte en caja.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Modal Footer Actions */}
+            <div className="p-4 sm:p-5 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <button
+                onClick={() => setSelectedOfficeModal(null)}
+                className="w-full sm:w-auto px-5 py-2.5 text-xs font-bold text-slate-600 bg-white hover:bg-slate-100 border border-slate-200 rounded-xl transition-colors cursor-pointer"
+              >
+                Cerrar
+              </button>
+
+              <button
+                onClick={() => {
+                  setSelectedOfficeModal(null);
+                  openRegistrationModal('office_modal_cta');
+                }}
+                className="w-full sm:w-auto px-6 py-2.5 text-xs font-bold text-white bg-emerald-700 hover:bg-emerald-800 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <UserCheck className="w-4 h-4" />
+                <span>Crear Cuenta de Socio para Compras</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
